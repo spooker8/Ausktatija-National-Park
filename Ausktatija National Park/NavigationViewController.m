@@ -7,6 +7,7 @@
 //
 
 #import "NavigationViewController.h"
+#import "SWRevealViewController.h"
 
 @interface NavigationViewController ()
 
@@ -21,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menu = @[@"first",@"second", @"third"];
+    menu = @[@"one",@"two", @"three", @"four",@"five",@"six",@"seven",@"eight",@"nine",@"ten",@"eleven",@"twelve"];
     
 }
 
@@ -61,8 +62,13 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+   
+    // Set the title of navigation bar by using the menu items
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
+    destViewController.title = [[menu objectAtIndex:indexPath.row] capitalizedString];
+    
+    
 }
 
 

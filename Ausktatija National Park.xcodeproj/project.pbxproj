@@ -17,6 +17,7 @@
 		4484475A1B6735B70059FF99 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 448447581B6735B70059FF99 /* LaunchScreen.xib */; };
 		448447661B6735B70059FF99 /* Ausktatija_National_ParkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 448447651B6735B70059FF99 /* Ausktatija_National_ParkTests.m */; };
 		448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448447711B674ECF0059FF99 /* SWRevealViewController.m */; };
+		44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B061871B690FC600FA8AB2 /* AboutParkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		448447651B6735B70059FF99 /* Ausktatija_National_ParkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ausktatija_National_ParkTests.m; sourceTree = "<group>"; };
 		448447701B674ECF0059FF99 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		448447711B674ECF0059FF99 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		44B061861B690FC600FA8AB2 /* AboutParkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutParkViewController.h; sourceTree = "<group>"; };
+		44B061871B690FC600FA8AB2 /* AboutParkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutParkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				4484476F1B674E6B0059FF99 /* SWRevealViewController */,
 				448447581B6735B70059FF99 /* LaunchScreen.xib */,
 				448447491B6735B70059FF99 /* Supporting Files */,
+				44B061861B690FC600FA8AB2 /* AboutParkViewController.h */,
+				44B061871B690FC600FA8AB2 /* AboutParkViewController.m */,
 			);
 			path = "Ausktatija National Park";
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				440D53B01B67729200104E13 /* NavigationViewController.m in Sources */,
 				4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */,
 				4484474C1B6735B70059FF99 /* main.m in Sources */,
+				44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */,
 				448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
