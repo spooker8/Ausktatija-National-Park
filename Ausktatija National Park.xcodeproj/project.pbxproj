@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		440D53AD1B67672500104E13 /* RevealMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440D53AC1B67672500104E13 /* RevealMenuViewController.m */; };
 		440D53B01B67729200104E13 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440D53AF1B67729200104E13 /* NavigationViewController.m */; };
 		4484474C1B6735B70059FF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4484474B1B6735B70059FF99 /* main.m */; };
 		4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4484474E1B6735B70059FF99 /* AppDelegate.m */; };
@@ -18,6 +17,7 @@
 		448447661B6735B70059FF99 /* Ausktatija_National_ParkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 448447651B6735B70059FF99 /* Ausktatija_National_ParkTests.m */; };
 		448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448447711B674ECF0059FF99 /* SWRevealViewController.m */; };
 		44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B061871B690FC600FA8AB2 /* AboutParkViewController.m */; };
+		44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		440D53AB1B67672500104E13 /* RevealMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevealMenuViewController.h; sourceTree = "<group>"; };
-		440D53AC1B67672500104E13 /* RevealMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevealMenuViewController.m; sourceTree = "<group>"; };
 		440D53AE1B67729200104E13 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		440D53AF1B67729200104E13 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		448447461B6735B70059FF99 /* Ausktatija National Park.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ausktatija National Park.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +50,8 @@
 		448447711B674ECF0059FF99 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		44B061861B690FC600FA8AB2 /* AboutParkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutParkViewController.h; sourceTree = "<group>"; };
 		44B061871B690FC600FA8AB2 /* AboutParkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutParkViewController.m; sourceTree = "<group>"; };
+		44B061BB1B69BAE300FA8AB2 /* EmergencyContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyContactViewController.h; sourceTree = "<group>"; };
+		44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyContactViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 				448447531B6735B70059FF99 /* Main.storyboard */,
 				440D53AE1B67729200104E13 /* NavigationViewController.h */,
 				440D53AF1B67729200104E13 /* NavigationViewController.m */,
-				440D53AB1B67672500104E13 /* RevealMenuViewController.h */,
-				440D53AC1B67672500104E13 /* RevealMenuViewController.m */,
+				44B061BB1B69BAE300FA8AB2 /* EmergencyContactViewController.h */,
+				44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */,
 				448447561B6735B70059FF99 /* Images.xcassets */,
 				4484476F1B674E6B0059FF99 /* SWRevealViewController */,
 				448447581B6735B70059FF99 /* LaunchScreen.xib */,
@@ -247,11 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440D53AD1B67672500104E13 /* RevealMenuViewController.m in Sources */,
 				448447521B6735B70059FF99 /* ViewController.m in Sources */,
 				440D53B01B67729200104E13 /* NavigationViewController.m in Sources */,
 				4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */,
 				4484474C1B6735B70059FF99 /* main.m in Sources */,
+				44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */,
 				44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */,
 				448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */,
 			);

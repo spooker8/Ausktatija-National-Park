@@ -85,6 +85,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="uvB-OJ-Q0f" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="K3S-2P-j8H"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="four" textLabel="DQG-WR-9k4" style="IBUITableViewCellStyleDefault" id="NVw-mw-aGq">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -99,6 +102,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cEK-LM-CIF" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="oUP-st-LpG"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="five" textLabel="z52-XN-d7x" style="IBUITableViewCellStyleDefault" id="Uxq-UR-WNO">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -113,6 +119,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nua-yc-jLQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="yYK-2e-dIQ"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="six" textLabel="qye-NU-5M0" style="IBUITableViewCellStyleDefault" id="96Y-LC-ec6">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -225,7 +234,7 @@
             </objects>
             <point key="canvasLocation" x="212.5" y="-249.5"/>
         </scene>
-        <!--About Park View Controller-->
+        <!--About the National Park-->
         <scene sceneID="QP5-o4-GzY">
             <objects>
                 <viewController id="PhD-hY-RwK" customClass="AboutParkViewController" sceneMemberID="viewController">
@@ -236,10 +245,23 @@
                     <view key="view" contentMode="scaleToFill" id="qOC-dJ-Dh4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LE0-H2-UXb">
+                                <rect key="frame" x="7" y="73" width="362" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Aukštaitija National Park is a national park in north-eastern Lithuania, about 100 km north of Vilnius. Established in 1974, it is the oldest of the five national parks in Lithuania. At first it was named Lithuanian SSR National Park to emphasize that it was the first such park in the republic. In 1991 four other parks were established and were named after ethnographic regions of Lithuania. The park was renamed after Aukštaitija.
+
+The park covers 405.7 km². Ignalina district municipality controls about 50% of the area. Utena and Švenčionys district municipalities control 25%. Strictly protected areas occupy 2.1%. One can enter this territory only accompanied by a park employee. More than 70 percent of its area is covered by woods. 80 percent of woods are pine stands, some reaching 200 years old.
+
+Sixty-four species of plant, eight species of fungus and 48 species of bird found in the park are included in Lithuania's Red book. The park is famous for its biodiversity: 59% of all plant species in Lithuania can be found in the park, which covers less than 1% of Lithuania.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uED-Ht-LuP">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Ghl-qY-y3O"/>
+                    <navigationItem key="navigationItem" title="About the National Park" id="uED-Ht-LuP">
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon" id="Ghl-qY-y3O"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -248,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y11-gP-FJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602.5" y="-881.5"/>
+            <point key="canvasLocation" x="1584.5" y="-905.5"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Aag-as-Tga">
@@ -283,7 +305,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main View Controller" id="tpl-ZC-efy">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Drx-18-qtH"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon" id="Drx-18-qtH"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -292,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8z-od-WRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662.5" y="542.5"/>
+            <point key="canvasLocation" x="605.5" y="590.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fad-v5-YeQ">
@@ -311,12 +333,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d26-6C-1j6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217.5" y="542.5"/>
+            <point key="canvasLocation" x="179.5" y="590.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Emergency Contact View Controller-->
         <scene sceneID="q0w-CW-GqM">
             <objects>
-                <viewController id="dds-jW-DmQ" sceneMemberID="viewController">
+                <viewController id="dds-jW-DmQ" customClass="EmergencyContactViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ts1-Fy-2o5"/>
                         <viewControllerLayoutGuide type="bottom" id="8PG-QA-QJ4"/>
@@ -331,6 +353,49 @@
                                     <navigationItem title="About the Park" id="IlH-XR-btx"/>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wty-ve-dvp">
+                                <rect key="frame" x="10" y="72" width="358" height="143"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Aukštaitija National Park and Labanoras Regional Park Headquarters
+Lūšių g. 16
+Palūšė, Ignalinos r. LT-30202
+Lithuania
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+37038653135" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vwP-wT-nN9">
+                                <rect key="frame" x="16" y="274" width="118" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="112" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4a-5R-1pe">
+                                <rect key="frame" x="16" y="373" width="118" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Emergency Contact" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-gf-Cit">
+                                <rect key="frame" x="16" y="320" width="149" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-yD-S9U">
+                                <rect key="frame" x="157" y="274" width="77" height="30"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJ0-m1-jQi">
+                                <rect key="frame" x="157" y="373" width="77" height="30"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Park Ranger Contact" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ae-e3-mwT">
+                                <rect key="frame" x="16" y="228" width="156" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -339,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ff1-Sx-dqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602.5" y="-159.5"/>
+            <point key="canvasLocation" x="1584.5" y="-159.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MN8-um-EOu">
@@ -379,5 +444,175 @@
             </objects>
             <point key="canvasLocation" x="1038" y="-874"/>
         </scene>
+        <!--Emergency Contact View Controller-->
+        <scene sceneID="rdP-zf-FId">
+            <objects>
+                <viewController id="EZ2-xV-CVZ" customClass="EmergencyContactViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eUQ-K8-lQJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nof-XS-b04"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mXH-HX-JP6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Htf-a9-ecO">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="About the Park" id="Myl-d7-qec"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0pp-gy-10p">
+                                <rect key="frame" x="23" y="88" width="329" height="457"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="*click on the title to know how to get there" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pvu-ly-dvw">
+                                <rect key="frame" x="41" y="591" width="293" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaS-ss-fd7">
+                                <rect key="frame" x="23" y="553" width="329" height="30"/>
+                                <state key="normal" title="Name of the place">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kbF-AU-Bvc"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVp-8U-hRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584.5" y="634.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5g8-jC-8NF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uvB-OJ-Q0f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9VD-rO-hRV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EZ2-xV-CVZ" kind="relationship" relationship="rootViewController" id="i2X-t0-pCE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CW8-yF-uAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081.5" y="639.5"/>
+        </scene>
+        <!--Emergency Contact View Controller-->
+        <scene sceneID="Wrq-ud-tMK">
+            <objects>
+                <viewController id="gaj-d9-4b6" customClass="EmergencyContactViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fff-TS-2Jx"/>
+                        <viewControllerLayoutGuide type="bottom" id="85t-vi-TgE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uUK-c2-PON">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-f7-LYP">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="About the Park" id="lUD-bc-Igp"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="lakes" translatesAutoresizingMaskIntoConstraints="NO" id="hxD-Vd-vd8">
+                                <rect key="frame" x="10" y="72" width="358" height="143"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yE1-8T-IXP"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1o-pi-iCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.5" y="-1640.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wmf-7c-y3g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nua-yc-jLQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0F-wN-Toi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gaj-d9-4b6" kind="relationship" relationship="rootViewController" id="O5W-ip-qFE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3N-EG-cUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.5" y="-1603.5"/>
+        </scene>
+        <!--Emergency Contact View Controller-->
+        <scene sceneID="EDK-sy-66c">
+            <objects>
+                <viewController id="v4N-gJ-qvD" customClass="EmergencyContactViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dWd-6o-AQW"/>
+                        <viewControllerLayoutGuide type="bottom" id="4HW-5q-qjQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tJ9-TG-eam">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIz-3m-y3F">
+                                <rect key="frame" x="0.0" y="-5" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="About the Park" id="PE6-KK-Z1u"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="lakes" translatesAutoresizingMaskIntoConstraints="NO" id="mmf-0D-m9u">
+                                <rect key="frame" x="10" y="72" width="358" height="143"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n5Q-Ku-XjM"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAB-Lf-ptW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548.5" y="-2380.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BSv-Zs-FJP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cEK-LM-CIF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mio-un-KR3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v4N-gJ-qvD" kind="relationship" relationship="rootViewController" id="mII-Vz-RZ6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGb-Ua-8Ds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033.5" y="-2341.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="reveal-icon" width="22" height="17"/>
+    </resources>
 </document>
