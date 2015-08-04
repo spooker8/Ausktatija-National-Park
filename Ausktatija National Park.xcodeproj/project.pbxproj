@@ -18,6 +18,10 @@
 		448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448447711B674ECF0059FF99 /* SWRevealViewController.m */; };
 		44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B061871B690FC600FA8AB2 /* AboutParkViewController.m */; };
 		44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */; };
+		44DD18C01B6F2DB70020A599 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */; };
+		44DD18C31B6F2EC40020A599 /* HowToGetThereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD18C21B6F2EC40020A599 /* HowToGetThereViewController.m */; };
+		44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD18C51B6F2F250020A599 /* PopularLakesViewController.m */; };
+		44DD18CC1B705B8E0020A599 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD18CB1B705B8E0020A599 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,14 @@
 		44B061871B690FC600FA8AB2 /* AboutParkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutParkViewController.m; sourceTree = "<group>"; };
 		44B061BB1B69BAE300FA8AB2 /* EmergencyContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyContactViewController.h; sourceTree = "<group>"; };
 		44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyContactViewController.m; sourceTree = "<group>"; };
+		44DD18BE1B6F2DB70020A599 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
+		44DD18C11B6F2EC40020A599 /* HowToGetThereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToGetThereViewController.h; sourceTree = "<group>"; };
+		44DD18C21B6F2EC40020A599 /* HowToGetThereViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToGetThereViewController.m; sourceTree = "<group>"; };
+		44DD18C41B6F2F250020A599 /* PopularLakesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularLakesViewController.h; sourceTree = "<group>"; };
+		44DD18C51B6F2F250020A599 /* PopularLakesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularLakesViewController.m; sourceTree = "<group>"; };
+		44DD18CA1B705B8E0020A599 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		44DD18CB1B705B8E0020A599 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +105,11 @@
 		448447481B6735B70059FF99 /* Ausktatija National Park */ = {
 			isa = PBXGroup;
 			children = (
+				448447531B6735B70059FF99 /* Main.storyboard */,
 				4484474D1B6735B70059FF99 /* AppDelegate.h */,
 				4484474E1B6735B70059FF99 /* AppDelegate.m */,
 				448447501B6735B70059FF99 /* ViewController.h */,
 				448447511B6735B70059FF99 /* ViewController.m */,
-				448447531B6735B70059FF99 /* Main.storyboard */,
 				440D53AE1B67729200104E13 /* NavigationViewController.h */,
 				440D53AF1B67729200104E13 /* NavigationViewController.m */,
 				44B061BB1B69BAE300FA8AB2 /* EmergencyContactViewController.h */,
@@ -105,9 +117,17 @@
 				448447561B6735B70059FF99 /* Images.xcassets */,
 				4484476F1B674E6B0059FF99 /* SWRevealViewController */,
 				448447581B6735B70059FF99 /* LaunchScreen.xib */,
-				448447491B6735B70059FF99 /* Supporting Files */,
 				44B061861B690FC600FA8AB2 /* AboutParkViewController.h */,
 				44B061871B690FC600FA8AB2 /* AboutParkViewController.m */,
+				44DD18BE1B6F2DB70020A599 /* PhotosViewController.h */,
+				44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */,
+				44DD18C11B6F2EC40020A599 /* HowToGetThereViewController.h */,
+				44DD18C21B6F2EC40020A599 /* HowToGetThereViewController.m */,
+				44DD18CA1B705B8E0020A599 /* WebViewController.h */,
+				44DD18CB1B705B8E0020A599 /* WebViewController.m */,
+				44DD18C41B6F2F250020A599 /* PopularLakesViewController.h */,
+				44DD18C51B6F2F250020A599 /* PopularLakesViewController.m */,
+				448447491B6735B70059FF99 /* Supporting Files */,
 			);
 			path = "Ausktatija National Park";
 			sourceTree = "<group>";
@@ -249,11 +269,15 @@
 			files = (
 				448447521B6735B70059FF99 /* ViewController.m in Sources */,
 				440D53B01B67729200104E13 /* NavigationViewController.m in Sources */,
+				44DD18CC1B705B8E0020A599 /* WebViewController.m in Sources */,
 				4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */,
+				44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */,
 				4484474C1B6735B70059FF99 /* main.m in Sources */,
 				44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */,
+				44DD18C01B6F2DB70020A599 /* PhotosViewController.m in Sources */,
 				44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */,
 				448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */,
+				44DD18C31B6F2EC40020A599 /* HowToGetThereViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -249,11 +249,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LE0-H2-UXb">
                                 <rect key="frame" x="7" y="73" width="362" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Aukštaitija National Park is a national park in north-eastern Lithuania, about 100 km north of Vilnius. Established in 1974, it is the oldest of the five national parks in Lithuania. At first it was named Lithuanian SSR National Park to emphasize that it was the first such park in the republic. In 1991 four other parks were established and were named after ethnographic regions of Lithuania. The park was renamed after Aukštaitija.
+                                <string key="text">Aukštaitija National Park is a national park in north-eastern Lithuania, about 100 km north of Vilnius. Established in 1974, it is the oldest of the five national parks in Lithuania. At first it was named Lithuanian SSR National Park to emphasize that it was the first such park in the republic. In 1991 four other parks were established and were named after ethnographic regions of Lithuania. The park was renamed after Aukštaitija.
 
 The park covers 405.7 km². Ignalina district municipality controls about 50% of the area. Utena and Švenčionys district municipalities control 25%. Strictly protected areas occupy 2.1%. One can enter this territory only accompanied by a park employee. More than 70 percent of its area is covered by woods. 80 percent of woods are pine stands, some reaching 200 years old.
 
-Sixty-four species of plant, eight species of fungus and 48 species of bird found in the park are included in Lithuania's Red book. The park is famous for its biodiversity: 59% of all plant species in Lithuania can be found in the park, which covers less than 1% of Lithuania.</mutableString>
+Sixty-four species of plant, eight species of fungus and 48 species of bird found in the park are included in Lithuania's Red book. The park is famous for its biodiversity: 59% of all plant species in Lithuania can be found in the park, which covers less than 1% of Lithuania.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -444,10 +444,10 @@ Lithuania
             </objects>
             <point key="canvasLocation" x="1038" y="-874"/>
         </scene>
-        <!--Emergency Contact View Controller-->
+        <!--Photos View Controller-->
         <scene sceneID="rdP-zf-FId">
             <objects>
-                <viewController id="EZ2-xV-CVZ" customClass="EmergencyContactViewController" sceneMemberID="viewController">
+                <viewController id="EZ2-xV-CVZ" customClass="PhotosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eUQ-K8-lQJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Nof-XS-b04"/>
@@ -505,10 +505,10 @@ Lithuania
             </objects>
             <point key="canvasLocation" x="1081.5" y="639.5"/>
         </scene>
-        <!--Emergency Contact View Controller-->
+        <!--Popular Lakes View Controller-->
         <scene sceneID="Wrq-ud-tMK">
             <objects>
-                <viewController id="gaj-d9-4b6" customClass="EmergencyContactViewController" sceneMemberID="viewController">
+                <viewController id="gaj-d9-4b6" customClass="PopularLakesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fff-TS-2Jx"/>
                         <viewControllerLayoutGuide type="bottom" id="85t-vi-TgE"/>
@@ -523,12 +523,43 @@ Lithuania
                                     <navigationItem title="About the Park" id="lUD-bc-Igp"/>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="lakes" translatesAutoresizingMaskIntoConstraints="NO" id="hxD-Vd-vd8">
-                                <rect key="frame" x="10" y="72" width="358" height="143"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Popular Lakes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWM-hc-69P">
+                                <rect key="frame" x="16" y="81" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cqQ-Ya-rrE">
+                                <rect key="frame" x="0.0" y="127" width="380" height="540"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XUX-Kz-kY4">
+                                    <size key="itemSize" width="158" height="154"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3SL-E6-hM0">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="119" height="121"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="119" height="121"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QM0-CT-dmN">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="124" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="124" height="120"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -558,10 +589,10 @@ Lithuania
             </objects>
             <point key="canvasLocation" x="1037.5" y="-1603.5"/>
         </scene>
-        <!--Emergency Contact View Controller-->
+        <!--How To Get There View Controller-->
         <scene sceneID="EDK-sy-66c">
             <objects>
-                <viewController id="v4N-gJ-qvD" customClass="EmergencyContactViewController" sceneMemberID="viewController">
+                <viewController id="v4N-gJ-qvD" customClass="HowToGetThereViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dWd-6o-AQW"/>
                         <viewControllerLayoutGuide type="bottom" id="4HW-5q-qjQ"/>
@@ -576,12 +607,131 @@ Lithuania
                                     <navigationItem title="About the Park" id="PE6-KK-Z1u"/>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="lakes" translatesAutoresizingMaskIntoConstraints="NO" id="mmf-0D-m9u">
-                                <rect key="frame" x="10" y="72" width="358" height="143"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By Car from Vilnius" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0a-xF-T5u">
+                                <rect key="frame" x="16" y="81" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By Bus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NID-CF-Yza">
+                                <rect key="frame" x="16" y="230" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance : 111km " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNH-Af-VWk">
+                                <rect key="frame" x="16" y="151" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration : 1hrs 44 mins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaT-Fm-NuU">
+                                <rect key="frame" x="16" y="175" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration : 1hrs 36 mins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-qP-KKh">
+                                <rect key="frame" x="170" y="489" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="http://www.litrail.lt/en/tvarkarasciai/-/routes/find?p_auth=9laKJthB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIt-2p-N01">
+                                <rect key="frame" x="170" y="440" width="509" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration : 1hrs 50 mins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0i-Bh-evh">
+                                <rect key="frame" x="160" y="300" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By train" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuA-ae-QAh">
+                                <rect key="frame" x="16" y="405" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Rental" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydr-S4-xTu">
+                                <rect key="frame" x="22" y="537" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IE1-aP-N1r">
+                                <rect key="frame" x="16" y="434" width="136" height="76"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="trainWebsiteLinkButton:" destination="v4N-gJ-qvD" eventType="touchUpInside" id="MUz-qE-UuM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYE-FZ-VR9">
+                                <rect key="frame" x="22" y="558" width="71" height="35"/>
+                                <state key="normal" title="Admitta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carRentalAdmittaLinkButton:" destination="v4N-gJ-qvD" eventType="touchUpInside" id="m24-TX-3nO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHs-7Q-qGF">
+                                <rect key="frame" x="27" y="601" width="71" height="35"/>
+                                <state key="normal" title="hertz">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carRentalHertzLinkButton:" destination="v4N-gJ-qvD" eventType="touchUpInside" id="E9B-3P-mAq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVk-uU-GdX">
+                                <rect key="frame" x="118" y="558" width="71" height="35"/>
+                                <state key="normal" title="Trusticar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carRentalTrustiCarLinkButton:" destination="v4N-gJ-qvD" eventType="touchUpInside" id="r2D-q7-rIY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utX-bS-FcQ">
+                                <rect key="frame" x="16" y="110" width="114" height="35"/>
+                                <state key="normal" title="Driving Direction">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carDrivingDirectionButton:" destination="v4N-gJ-qvD" eventType="touchUpInside" id="ULf-65-BPL"/>
+                                    <segue destination="k8Q-kM-ja2" kind="show" identifier="myIdentifier" id="qWA-Wi-uiM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-t1-AEn">
+                                <rect key="frame" x="118" y="601" width="80" height="35"/>
+                                <state key="normal" title="greenmotor">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carRentalGreenMotionLinkButton:" destination="v4N-gJ-qvD" eventType="touchUpInside" id="AHv-UA-aKw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="http://www.autobusubilietai.lt/en/popular-bus-routes/Vilnius-Ignalina/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOo-wW-Up3">
+                                <rect key="frame" x="160" y="271" width="529" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="200" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwM-Rg-Ufe">
+                                <rect key="frame" x="17" y="259" width="136" height="76"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="busWebsiteLinkButton:" destination="v4N-gJ-qvD" eventType="touchUpInside" id="OkR-v7-Fia"/>
+                                    <segue destination="k8Q-kM-ja2" kind="show" id="HWd-93-YiV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -591,6 +741,44 @@ Lithuania
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAB-Lf-ptW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1548.5" y="-2380.5"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="OGJ-9k-bXV">
+            <objects>
+                <viewController storyboardIdentifier="HOWTOGETTHEREBROWSERVIEW" id="k8Q-kM-ja2" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OHC-vJ-sUP"/>
+                        <viewControllerLayoutGuide type="bottom" id="NLT-CG-tav"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pY0-uV-5yx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fc4-l4-g0f">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="k8Q-kM-ja2" id="W6O-GY-13h"/>
+                                </connections>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qn-Ax-KIo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="URL title" id="b1c-Lq-hAs"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mjj-Fw-Kh0"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webview" destination="Fc4-l4-g0f" id="Xi0-Kf-Jdp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bkb-va-srB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996.5" y="-2380.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BSv-Zs-FJP">
@@ -615,4 +803,7 @@ Lithuania
     <resources>
         <image name="reveal-icon" width="22" height="17"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qWA-Wi-uiM"/>
+    </inferredMetricsTieBreakers>
 </document>
