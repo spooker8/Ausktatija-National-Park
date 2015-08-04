@@ -47,7 +47,7 @@
 
 - (IBAction)carDrivingDirectionButton:(UIButton *)sender {
     
-   // [self performSegueWithIdentifier:@"myIdentifier" sender:sender];
+    //[self performSegueWithIdentifier:@"myIdentifier" sender:nil];
     
     
 }
@@ -55,6 +55,8 @@
 
 
 - (IBAction)busWebsiteLinkButton:(UIButton *)sender {
+    
+   
 }
 
 
@@ -62,7 +64,7 @@
 - (IBAction)trainWebsiteLinkButton:(id)sender {
     
     
-  //  [self performSegueWithIdentifier:@"myIdentifier" sender:sender];
+  //  [self performSegueWithIdentifier:@"myIdentifier" sender:nil];
     
 
     

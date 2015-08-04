@@ -757,9 +757,6 @@ Lithuania
                             <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fc4-l4-g0f">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="delegate" destination="k8Q-kM-ja2" id="W6O-GY-13h"/>
-                                </connections>
                             </webView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qn-Ax-KIo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -773,7 +770,7 @@ Lithuania
                     <navigationItem key="navigationItem" id="Mjj-Fw-Kh0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="webview" destination="Fc4-l4-g0f" id="Xi0-Kf-Jdp"/>
+                        <outlet property="webView" destination="Fc4-l4-g0f" id="Ru5-KI-HuP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkb-va-srB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -804,6 +801,6 @@ Lithuania
         <image name="reveal-icon" width="22" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qWA-Wi-uiM"/>
+        <segue reference="HWd-93-YiV"/>
     </inferredMetricsTieBreakers>
 </document>

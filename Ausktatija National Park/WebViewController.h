@@ -7,19 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HowToGetThereViewController.h"
 
 @interface WebViewController : UIViewController <UIWebViewDelegate>
 {
     
-    UIWebView *webView;
-  //  NSString *websiteURL;
+      IBOutlet UIWebView *webView;
+                UIView *loadingView;
+    
+    
+ //   NSString *websiteURL;
     
     
 }
 
 
-
-@property (weak, nonatomic) IBOutlet UIWebView *webview;
+    
 @property (weak, nonatomic) NSString *websiteURL;
 
 
