@@ -9,7 +9,8 @@
 #import "PopularLakesViewController.h"
 #import "SWRevealViewController.h"
 
-@interface PopularLakesViewController ()
+@interface PopularLakesViewController ()  <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
 
 @end
 
@@ -35,6 +36,13 @@
     
     
 }
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

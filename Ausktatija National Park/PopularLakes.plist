@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>item 0</key>
+	<array>
+		<string>Gavys</string>
+		<string>lake1.jpg</string>
+		<string>23</string>
+		<string>10</string>
+	</array>
+	<key>item 1</key>
+	<array>
+		<string>Gavaitis</string>
+		<string>lake1.jpg</string>
+	</array>
+	<key>item 2</key>
+	<array>
+		<string>Ilgis</string>
+		<string>lake1.jpg</string>
+	</array>
+	<key>item 3</key>
+	<array>
+		<string>Šiekštys</string>
+		<string>lake1.jpg</string>
+	</array>
+	<key>item 4</key>
+	<array>
+		<string>Mekšrinis</string>
+		<string>lake1.jpg</string>
+	</array>
+	<key>item 5</key>
+	<array>
+		<string>Paplovinis</string>
+		<string>lake1.jpg</string>
+	</array>
+	<key>item 6</key>
+	<array>
+		<string>Palaukinis</string>
+		<string>lake1.jpg</string>
+	</array>
+	<key>item 7</key>
+	<array>
+		<string>Agarinis</string>
+		<string>lake1.jpg</string>
+	</array>
+	<key>item 8</key>
+	<array>
+		<string>Gulbinis</string>
+		<string>lake1.jpg</string>
+	</array>
+</dict>
+</plist>

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PopularLakesModel.h"
+#import "PopularLakesCollectionViewCollectionViewCell.h"
 
-@interface PopularLakesViewController : UIViewController
+@interface PopularLakesViewController : UIViewController 
+
+
+
+
 
 @end
