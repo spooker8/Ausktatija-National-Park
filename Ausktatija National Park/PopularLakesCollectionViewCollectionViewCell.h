@@ -10,4 +10,8 @@
 
 @interface PopularLakesCollectionViewCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *lakeImage;
+@property (weak, nonatomic) IBOutlet UILabel *lakeName;
+
+
 @end

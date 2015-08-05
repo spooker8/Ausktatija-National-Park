@@ -8,6 +8,10 @@
 
 #import "PopularLakesViewController.h"
 #import "SWRevealViewController.h"
+#import "PopularLakesModel.h"
+#import "PlistToModelConverter.h"
+#import "PopularLakesCollectionViewCollectionViewCell.h"
+
 
 @interface PopularLakesViewController ()  <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -24,6 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     self.title = NSLocalizedString(@"Popular Lakes", nil);
     
     SWRevealViewController *revealController = [self revealViewController];
@@ -36,16 +41,53 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonIteam;
     
+    self.lakes = [PlistToModelConverter convertPopularLakesPlistToPopularLakesArray];
+    NSLog(@"loading");
+
     
+}
+
+#pragma mark Datasource
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    
+    return 1;
+    
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    
+   
+    return self.lakes.count;r
     
     
 }
 
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 
+    PopularLakesCollectionViewCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LakeCell" forIndexPath:indexPath];
+    
+    
+    PopularLakesModel *lakes = self.lakes[indexPath.section];
+    cell.lakeName.text = lakes.name;
+    NSLog(@"Lake Name %@",lakes.name);
+    cell.lakeImage.image = [UIImage imageNamed:lakes.image];
+   
+    return cell;
+}
 
-
-
-
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedIndexPath = indexPath;
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    return YES;
+    
+    
+}
 
 
 - (void)didReceiveMemoryWarning {
