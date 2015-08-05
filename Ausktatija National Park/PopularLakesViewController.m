@@ -11,6 +11,7 @@
 #import "PopularLakesModel.h"
 #import "PlistToModelConverter.h"
 #import "PopularLakesCollectionViewCollectionViewCell.h"
+#import "PopularLakesDetailViewController.h"
 
 
 @interface PopularLakesViewController ()  <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -41,9 +42,11 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonIteam;
     
+    
     self.lakes = [PlistToModelConverter convertPopularLakesPlistToPopularLakesArray];
-    NSLog(@"loading");
+    NSLog(@"loading %@",self.lakes);
 
+    
     
 }
 
@@ -60,7 +63,9 @@
 {
     
    
-    return self.lakes.count;r
+  //  PopularLakesModel *popularLakes = self.lakes[section];
+    
+    return self.lakes.count;
     
     
 }
@@ -72,9 +77,9 @@
     PopularLakesCollectionViewCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LakeCell" forIndexPath:indexPath];
     
     
-    PopularLakesModel *lakes = self.lakes[indexPath.section];
-    cell.lakeName.text = lakes.name;
-    NSLog(@"Lake Name %@",lakes.name);
+    PopularLakesModel *lakes = self.lakes[indexPath.row];
+   cell.lakeName.text = lakes.name;
+    
     cell.lakeImage.image = [UIImage imageNamed:lakes.image];
    
     return cell;
@@ -88,6 +93,26 @@
     
     
 }
+
+
+#pragma mark Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if([segue.identifier isEqualToString:@"LAKEPUSH"])
+        
+    {
+        
+        PopularLakesDetailViewController *detailVC = segue.destinationViewController;
+        detailVC.lakeInfo = ((PopularLakesModel*)self.lakes[self.selectedIndexPath.row]);
+    }
+    
+    
+}
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

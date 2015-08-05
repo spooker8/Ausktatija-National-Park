@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>item 0</key>
+<array>
 	<dict>
 		<key>Name</key>
 		<string>Gavys</string>
@@ -13,7 +12,6 @@
 		<key>Depth</key>
 		<string>10</string>
 	</dict>
-	<key>item 2</key>
 	<dict>
 		<key>Name</key>
 		<string>Ilgis</string>
@@ -24,7 +22,6 @@
 		<key>Depth</key>
 		<string></string>
 	</dict>
-	<key>item 3</key>
 	<dict>
 		<key>Name</key>
 		<string>Šiekštys</string>
@@ -35,7 +32,6 @@
 		<key>Depth</key>
 		<string></string>
 	</dict>
-	<key>item 4</key>
 	<dict>
 		<key>Name</key>
 		<string>Mekšrinis</string>
@@ -46,7 +42,6 @@
 		<key>Depth</key>
 		<string></string>
 	</dict>
-	<key>item 5</key>
 	<dict>
 		<key>Name</key>
 		<string>Paplovinis</string>
@@ -57,7 +52,6 @@
 		<key>Depth</key>
 		<string></string>
 	</dict>
-	<key>item 6</key>
 	<dict>
 		<key>Name</key>
 		<string>Palaukinis</string>
@@ -68,7 +62,6 @@
 		<key>Depth</key>
 		<string></string>
 	</dict>
-	<key>item 7</key>
 	<dict>
 		<key>Name</key>
 		<string>Agarinis</string>
@@ -79,7 +72,6 @@
 		<key>Depth</key>
 		<string></string>
 	</dict>
-	<key>item 8</key>
 	<dict>
 		<key>Name</key>
 		<string>Gulbinis</string>
@@ -90,5 +82,5 @@
 		<key>Depth</key>
 		<string></string>
 	</dict>
-</dict>
+</array>
 </plist>

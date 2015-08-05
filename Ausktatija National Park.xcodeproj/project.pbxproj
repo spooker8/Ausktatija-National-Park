@@ -26,6 +26,7 @@
 		44DD19031B71B88A0020A599 /* PopularLakes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44DD19021B71B88A0020A599 /* PopularLakes.plist */; };
 		44DD19091B71BFF80020A599 /* PopularLakesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD19081B71BFF80020A599 /* PopularLakesModel.m */; };
 		44DD190D1B71E4430020A599 /* PlistToModelConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD190C1B71E4430020A599 /* PlistToModelConverter.m */; };
+		44DD19101B7249D20020A599 /* PopularLakesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		44DD19081B71BFF80020A599 /* PopularLakesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularLakesModel.m; sourceTree = "<group>"; };
 		44DD190B1B71E4430020A599 /* PlistToModelConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistToModelConverter.h; sourceTree = "<group>"; };
 		44DD190C1B71E4430020A599 /* PlistToModelConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistToModelConverter.m; sourceTree = "<group>"; };
+		44DD190E1B7249D20020A599 /* PopularLakesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularLakesDetailViewController.h; sourceTree = "<group>"; };
+		44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularLakesDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,8 @@
 				44DD18C51B6F2F250020A599 /* PopularLakesViewController.m */,
 				44DD18FF1B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.h */,
 				44DD19001B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.m */,
+				44DD190E1B7249D20020A599 /* PopularLakesDetailViewController.h */,
+				44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */,
 				448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */,
 				44DD18C31B6F2EC40020A599 /* HowToGetThereViewController.m in Sources */,
+				44DD19101B7249D20020A599 /* PopularLakesDetailViewController.m in Sources */,
 				44DD19091B71BFF80020A599 /* PopularLakesModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

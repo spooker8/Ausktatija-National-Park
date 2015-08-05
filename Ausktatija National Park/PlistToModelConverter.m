@@ -21,7 +21,7 @@
 {
     
     NSArray *popularLakesArrayFromFile = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]
-                                pathForResource:@"PopularLakes" ofType:@"plist"]];
+                    pathForResource:@"PopularLakes" ofType:@"plist"]];
                                   
     
     NSMutableArray *popularLakesArray = [[NSMutableArray alloc] init];
@@ -30,18 +30,27 @@
         
     {
         
-        NSString *lakeName = showDict[kKeyLakeName];
-        NSString *lakeImage = showDict[kKeyImage];
-        NSString *lakeSize = showDict[kKeySize];
-        NSString *lakeDepth =showDict[kKeyDepth];
-    
-    
-        PopularLakesModel *popularLakes = [[PopularLakesModel alloc] initWithName:lakeName WithImage:lakeImage WithSize:lakeSize WithDepth:lakeDepth];
+//        NSString *lakeName = showDict[kKeyLakeName];
+//        NSString *lakeImage = showDict[kKeyImage];
+//        NSString *lakeSize = showDict[kKeySize];
+//        NSString *lakeDepth =showDict[kKeyDepth];
+//    
+//    
+//        PopularLakesModel *popularLakes = [[PopularLakesModel alloc] initWithName:lakeName
+//                                                                        WithImage:lakeImage
+//                                                                         WithSize:lakeSize
+//                                                                        WithDepth:lakeDepth];
+        
+        PopularLakesModel *popularLakes = [[PopularLakesModel alloc] initWithName:showDict[@"Name"] WithImage:showDict[@"Image"] WithSize:showDict[@"Size"] WithDepth:showDict[@"Depth"]];
+                                           
+       // {
+        
         
         [popularLakesArray addObject:popularLakes];
     }
     
     return popularLakesArray;
+    
 }
 
 

@@ -562,7 +562,7 @@ Lithuania
                                         <connections>
                                             <outlet property="lakeImage" destination="w37-el-bb1" id="bPo-qI-uzD"/>
                                             <outlet property="lakeName" destination="3zl-Zx-Dk6" id="6BJ-nT-QXP"/>
-                                            <segue destination="E5D-Ft-dVt" kind="show" id="Nkh-XN-IZR"/>
+                                            <segue destination="E5D-Ft-dVt" kind="show" identifier="LAKEPUSH" id="Nkh-XN-IZR"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -581,10 +581,10 @@ Lithuania
             </objects>
             <point key="canvasLocation" x="1561.5" y="-1603.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Popular Lakes Detail View Controller-->
         <scene sceneID="X3X-sB-jee">
             <objects>
-                <viewController id="E5D-Ft-dVt" sceneMemberID="viewController">
+                <viewController id="E5D-Ft-dVt" customClass="PopularLakesDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fWU-p5-5fL"/>
                         <viewControllerLayoutGuide type="bottom" id="YI4-ID-W0y"/>
@@ -684,6 +684,13 @@ Lithuania
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="howToGetThereButton" destination="xme-Ze-b1T" id="1Q1-Sl-eRY"/>
+                        <outlet property="lakeDepth" destination="mH5-bO-euh" id="hgB-8f-7eu"/>
+                        <outlet property="lakeImage" destination="lco-T2-wdG" id="78U-d9-aKp"/>
+                        <outlet property="lakeName" destination="sKf-bT-hXd" id="rs5-nK-XXB"/>
+                        <outlet property="lakeSize" destination="0i2-Aq-vzK" id="Ghr-e1-RhA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yP1-P2-wlq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
