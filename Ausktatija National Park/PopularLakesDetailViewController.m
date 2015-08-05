@@ -24,6 +24,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.lakeImage.image = [UIImage imageNamed:self.lakeInfo.image];
+    self.lakeName.text = self.lakeInfo.name;
+    self.lakeSize.text = self.lakeInfo.size;
+    self.lakeDepth.text = self.lakeInfo.depth;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
