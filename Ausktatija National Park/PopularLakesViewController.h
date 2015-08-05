@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "PopularLakesModel.h"
 #import "PopularLakesCollectionViewCollectionViewCell.h"
+#import "PlistToModelConverter.h"
+
 
 @interface PopularLakesViewController : UIViewController 
 

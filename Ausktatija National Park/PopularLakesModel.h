@@ -10,4 +10,15 @@
 
 @interface PopularLakesModel : NSObject
 
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *image;
+@property (strong, nonatomic) NSString *size;
+@property (strong, nonatomic) NSString *depth;
+
+-(instancetype)initWithName:(NSString*)name
+                  WithImage:(NSString*)image
+                   WithSize:(NSString*)size
+                  WithDepth:(NSString*)depth;
+
+
 @end

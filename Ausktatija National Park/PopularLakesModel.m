@@ -10,4 +10,23 @@
 
 @implementation PopularLakesModel
 
+
+-(instancetype)initWithName:(NSString *)name WithImage:(NSString *)image WithSize:(NSString *)size WithDepth:(NSString *)depth
+{
+    
+    self = [self init];
+    if(self)
+        
+    {
+        self.name = name;
+        self.image = image;
+        self.size = size;
+        self.depth = depth;
+        
+        
+    }
+    return self;
+    
+}
+
 @end

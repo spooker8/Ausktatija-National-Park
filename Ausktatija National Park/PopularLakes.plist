@@ -3,51 +3,92 @@
 <plist version="1.0">
 <dict>
 	<key>item 0</key>
-	<array>
+	<dict>
+		<key>Name</key>
 		<string>Gavys</string>
+		<key>Image</key>
 		<string>lake1.jpg</string>
+		<key>Size</key>
 		<string>23</string>
+		<key>Depth</key>
 		<string>10</string>
-	</array>
-	<key>item 1</key>
-	<array>
-		<string>Gavaitis</string>
-		<string>lake1.jpg</string>
-	</array>
+	</dict>
 	<key>item 2</key>
-	<array>
+	<dict>
+		<key>Name</key>
 		<string>Ilgis</string>
+		<key>Image</key>
 		<string>lake1.jpg</string>
-	</array>
+		<key>Size</key>
+		<string></string>
+		<key>Depth</key>
+		<string></string>
+	</dict>
 	<key>item 3</key>
-	<array>
+	<dict>
+		<key>Name</key>
 		<string>Šiekštys</string>
+		<key>Image</key>
 		<string>lake1.jpg</string>
-	</array>
+		<key>Size</key>
+		<string></string>
+		<key>Depth</key>
+		<string></string>
+	</dict>
 	<key>item 4</key>
-	<array>
+	<dict>
+		<key>Name</key>
 		<string>Mekšrinis</string>
+		<key>Image</key>
 		<string>lake1.jpg</string>
-	</array>
+		<key>Size</key>
+		<string></string>
+		<key>Depth</key>
+		<string></string>
+	</dict>
 	<key>item 5</key>
-	<array>
+	<dict>
+		<key>Name</key>
 		<string>Paplovinis</string>
+		<key>Image</key>
 		<string>lake1.jpg</string>
-	</array>
+		<key>Size</key>
+		<string></string>
+		<key>Depth</key>
+		<string></string>
+	</dict>
 	<key>item 6</key>
-	<array>
+	<dict>
+		<key>Name</key>
 		<string>Palaukinis</string>
+		<key>Image</key>
 		<string>lake1.jpg</string>
-	</array>
+		<key>Size</key>
+		<string></string>
+		<key>Depth</key>
+		<string></string>
+	</dict>
 	<key>item 7</key>
-	<array>
+	<dict>
+		<key>Name</key>
 		<string>Agarinis</string>
+		<key>Image</key>
 		<string>lake1.jpg</string>
-	</array>
+		<key>Size</key>
+		<string></string>
+		<key>Depth</key>
+		<string></string>
+	</dict>
 	<key>item 8</key>
-	<array>
+	<dict>
+		<key>Name</key>
 		<string>Gulbinis</string>
+		<key>Image</key>
 		<string>lake1.jpg</string>
-	</array>
+		<key>Size</key>
+		<string></string>
+		<key>Depth</key>
+		<string></string>
+	</dict>
 </dict>
 </plist>

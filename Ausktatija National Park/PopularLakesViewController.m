@@ -9,7 +9,11 @@
 #import "PopularLakesViewController.h"
 #import "SWRevealViewController.h"
 
-@interface PopularLakesViewController ()  <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface PopularLakesViewController ()  <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (strong, nonatomic)NSArray *lakes;
+@property (strong, nonatomic)NSIndexPath *selectedIndexPath;
+
 
 
 @end
@@ -32,7 +36,7 @@
     
     self.navigationItem.leftBarButtonItem = revealButtonIteam;
     
-
+    
     
     
 }
