@@ -8,8 +8,15 @@
 
 #import "PhotosViewController.h"
 #import "SWRevealViewController.h"
+#import "PhotosCollectionViewCell.h"
+#import "DetailPhotoViewController.h"
+#import "FlickrModel.h"
 
-@interface PhotosViewController ()
+@interface PhotosViewController ()  <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (strong, nonatomic)NSArray *photos;
+@property (strong, nonatomic)NSIndexPath *selectedIndexPath;
+
 
 @end
 
@@ -32,7 +39,67 @@
     self.navigationItem.leftBarButtonItem = revealButtonIteam;
     
     
+   
+    
+    
 }
+
+
+#pragma mark Datasource
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    
+    return 1;
+    
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    
+    FlickrModel *flickArray = [[FlickrModel alloc] init];
+    return [flickArray.photoNames count];
+  
+    
+    
+    
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    PhotosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PHOTOCELL" forIndexPath:indexPath];
+    
+    
+    FlickrModel *lakes = self.photos[indexPath.row];
+    cell.photoName.text = photo
+    
+    cell.parkPhoto.image = [UIImage imageNamed:pho.image];
+    
+    return cell;
+}
+
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedIndexPath = indexPath;
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    return YES;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

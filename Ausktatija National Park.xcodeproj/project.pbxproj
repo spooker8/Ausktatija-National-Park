@@ -27,6 +27,10 @@
 		44DD19091B71BFF80020A599 /* PopularLakesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD19081B71BFF80020A599 /* PopularLakesModel.m */; };
 		44DD190D1B71E4430020A599 /* PlistToModelConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD190C1B71E4430020A599 /* PlistToModelConverter.m */; };
 		44DD19101B7249D20020A599 /* PopularLakesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */; };
+		44DD19151B7325A40020A599 /* JSON in Resources */ = {isa = PBXBuildFile; fileRef = 44DD19141B7325A40020A599 /* JSON */; };
+		44DD19181B7348AC0020A599 /* FlickrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD19171B7348AC0020A599 /* FlickrModel.m */; };
+		44DD191E1B734A5F0020A599 /* PhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */; };
+		44DD19231B74DD720020A599 /* DetailPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD19221B74DD720020A599 /* DetailPhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,13 @@
 		44DD190C1B71E4430020A599 /* PlistToModelConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistToModelConverter.m; sourceTree = "<group>"; };
 		44DD190E1B7249D20020A599 /* PopularLakesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularLakesDetailViewController.h; sourceTree = "<group>"; };
 		44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularLakesDetailViewController.m; sourceTree = "<group>"; };
+		44DD19141B7325A40020A599 /* JSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JSON; sourceTree = "<group>"; };
+		44DD19161B7348AC0020A599 /* FlickrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrModel.h; sourceTree = "<group>"; };
+		44DD19171B7348AC0020A599 /* FlickrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrModel.m; sourceTree = "<group>"; };
+		44DD191C1B734A5F0020A599 /* PhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewCell.h; sourceTree = "<group>"; };
+		44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewCell.m; sourceTree = "<group>"; };
+		44DD19211B74DD720020A599 /* DetailPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPhotoViewController.h; sourceTree = "<group>"; };
+		44DD19221B74DD720020A599 /* DetailPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +136,7 @@
 				44DD19051B71BF790020A599 /* View */,
 				44DD190A1B71E4180020A599 /* Util */,
 				4484476F1B674E6B0059FF99 /* SWRevealViewController */,
+				44DD19141B7325A40020A599 /* JSON */,
 				44DD19061B71BF7F0020A599 /* Controller */,
 				44DD19041B71BF640020A599 /* Model */,
 				448447491B6735B70059FF99 /* Supporting Files */,
@@ -173,6 +185,8 @@
 			children = (
 				44DD19071B71BFF80020A599 /* PopularLakesModel.h */,
 				44DD19081B71BFF80020A599 /* PopularLakesModel.m */,
+				44DD19161B7348AC0020A599 /* FlickrModel.h */,
+				44DD19171B7348AC0020A599 /* FlickrModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -191,8 +205,6 @@
 			children = (
 				44B061861B690FC600FA8AB2 /* AboutParkViewController.h */,
 				44B061871B690FC600FA8AB2 /* AboutParkViewController.m */,
-				44DD18BE1B6F2DB70020A599 /* PhotosViewController.h */,
-				44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */,
 				44DD18C11B6F2EC40020A599 /* HowToGetThereViewController.h */,
 				44DD18C21B6F2EC40020A599 /* HowToGetThereViewController.m */,
 				44DD18CA1B705B8E0020A599 /* WebViewController.h */,
@@ -209,6 +221,12 @@
 				44DD19001B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.m */,
 				44DD190E1B7249D20020A599 /* PopularLakesDetailViewController.h */,
 				44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */,
+				44DD18BE1B6F2DB70020A599 /* PhotosViewController.h */,
+				44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */,
+				44DD191C1B734A5F0020A599 /* PhotosCollectionViewCell.h */,
+				44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */,
+				44DD19211B74DD720020A599 /* DetailPhotoViewController.h */,
+				44DD19221B74DD720020A599 /* DetailPhotoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -302,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44DD19151B7325A40020A599 /* JSON in Resources */,
 				448447551B6735B70059FF99 /* Main.storyboard in Resources */,
 				4484475A1B6735B70059FF99 /* LaunchScreen.xib in Resources */,
 				448447571B6735B70059FF99 /* Images.xcassets in Resources */,
@@ -329,13 +348,16 @@
 				44DD18CC1B705B8E0020A599 /* WebViewController.m in Sources */,
 				4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */,
 				44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */,
+				44DD19181B7348AC0020A599 /* FlickrModel.m in Sources */,
 				44DD190D1B71E4430020A599 /* PlistToModelConverter.m in Sources */,
 				4484474C1B6735B70059FF99 /* main.m in Sources */,
 				44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */,
+				44DD19231B74DD720020A599 /* DetailPhotoViewController.m in Sources */,
 				44DD18C01B6F2DB70020A599 /* PhotosViewController.m in Sources */,
 				44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */,
 				448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */,
 				44DD18C31B6F2EC40020A599 /* HowToGetThereViewController.m in Sources */,
+				44DD191E1B734A5F0020A599 /* PhotosCollectionViewCell.m in Sources */,
 				44DD19101B7249D20020A599 /* PopularLakesDetailViewController.m in Sources */,
 				44DD19091B71BFF80020A599 /* PopularLakesModel.m in Sources */,
 			);
