@@ -14,13 +14,20 @@
 
 @interface PhotosViewController ()  <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic)NSArray *photos;
+
+
+@property (strong, nonatomic)NSMutableArray *flickrPhotosTitle;
+@property (strong, nonatomic)NSMutableArray *flickrPhotosImageSmall;
+@property (strong, nonatomic)NSMutableArray *flickrPhotosImageLarge;
 @property (strong, nonatomic)NSIndexPath *selectedIndexPath;
 
 
 @end
 
+
+
 @implementation PhotosViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,9 +44,18 @@
     UIBarButtonItem *revealButtonIteam = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"] style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
     
     self.navigationItem.leftBarButtonItem = revealButtonIteam;
-    
-    
    
+    
+    FlickrModel *flickerinfo = [[FlickrModel alloc] init];
+    
+    [flickerinfo searchFlickrPhotos];
+    
+    self.flickrPhotosTitle = flickerinfo.photoTitles;
+    self.flickrPhotosImageSmall = flickerinfo.photoSmallImageData;
+    self.flickrPhotosImageLarge = flickerinfo.photoURLsLargeImage;
+    
+  
+   // NSLog(@"%@",self.flickrPhotos);
     
     
 }
@@ -57,10 +73,10 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     
-    FlickrModel *flickArray = [[FlickrModel alloc] init];
-    return [flickArray.photoNames count];
-  
     
+    return [self.flickrPhotosTitle count];
+  
+
     
     
 }
@@ -71,24 +87,24 @@
     
     PhotosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PHOTOCELL" forIndexPath:indexPath];
     
+    cell.photoName.text = [self.flickrPhotosTitle objectAtIndex:indexPath.row];
     
-    FlickrModel *lakes = self.photos[indexPath.row];
-    cell.photoName.text = photo
+    NSData *imageData = [self.flickrPhotosImageSmall objectAtIndex:indexPath.row];
+    cell.parkPhoto.image = [UIImage imageWithData:imageData];
     
-    cell.parkPhoto.image = [UIImage imageNamed:pho.image];
+ 
     
     return cell;
 }
 
--(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedIndexPath = indexPath;
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    return YES;
-    
-    
+    // TODO: Select Item
 }
-
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    // TODO: Deselect item
+}
 
 
 

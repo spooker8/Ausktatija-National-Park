@@ -180,6 +180,72 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		44DA65311B81A79300403160 /* about the park */ = {
+			isa = PBXGroup;
+			children = (
+				44B061861B690FC600FA8AB2 /* AboutParkViewController.h */,
+				44B061871B690FC600FA8AB2 /* AboutParkViewController.m */,
+			);
+			name = "about the park";
+			sourceTree = "<group>";
+		};
+		44DA65321B81A79B00403160 /* how to get there */ = {
+			isa = PBXGroup;
+			children = (
+				44DD18CA1B705B8E0020A599 /* WebViewController.h */,
+				44DD18CB1B705B8E0020A599 /* WebViewController.m */,
+				44DD18C11B6F2EC40020A599 /* HowToGetThereViewController.h */,
+				44DD18C21B6F2EC40020A599 /* HowToGetThereViewController.m */,
+			);
+			name = "how to get there";
+			sourceTree = "<group>";
+		};
+		44DA65331B81A7C400403160 /* emegency contacts */ = {
+			isa = PBXGroup;
+			children = (
+				44B061BB1B69BAE300FA8AB2 /* EmergencyContactViewController.h */,
+				44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */,
+			);
+			name = "emegency contacts";
+			sourceTree = "<group>";
+		};
+		44DA65341B81A7DC00403160 /* popular lakes */ = {
+			isa = PBXGroup;
+			children = (
+				44DD18C41B6F2F250020A599 /* PopularLakesViewController.h */,
+				44DD18C51B6F2F250020A599 /* PopularLakesViewController.m */,
+				44DD18FF1B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.h */,
+				44DD19001B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.m */,
+				44DD190E1B7249D20020A599 /* PopularLakesDetailViewController.h */,
+				44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */,
+			);
+			name = "popular lakes";
+			sourceTree = "<group>";
+		};
+		44DA65351B81A7E700403160 /* Flickr Photo View  */ = {
+			isa = PBXGroup;
+			children = (
+				44DD18BE1B6F2DB70020A599 /* PhotosViewController.h */,
+				44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */,
+				44DD191C1B734A5F0020A599 /* PhotosCollectionViewCell.h */,
+				44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */,
+				44DD19211B74DD720020A599 /* DetailPhotoViewController.h */,
+				44DD19221B74DD720020A599 /* DetailPhotoViewController.m */,
+			);
+			name = "Flickr Photo View ";
+			sourceTree = "<group>";
+		};
+		44DA65361B81A80500403160 /* Main view controller */ = {
+			isa = PBXGroup;
+			children = (
+				448447501B6735B70059FF99 /* ViewController.h */,
+				448447511B6735B70059FF99 /* ViewController.m */,
+				440D53AE1B67729200104E13 /* NavigationViewController.h */,
+				440D53AF1B67729200104E13 /* NavigationViewController.m */,
+			);
+			name = "Main view controller";
+			sourceTree = "<group>";
+		};
 		44DD19041B71BF640020A599 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,30 +269,12 @@
 		44DD19061B71BF7F0020A599 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				44B061861B690FC600FA8AB2 /* AboutParkViewController.h */,
-				44B061871B690FC600FA8AB2 /* AboutParkViewController.m */,
-				44DD18C11B6F2EC40020A599 /* HowToGetThereViewController.h */,
-				44DD18C21B6F2EC40020A599 /* HowToGetThereViewController.m */,
-				44DD18CA1B705B8E0020A599 /* WebViewController.h */,
-				44DD18CB1B705B8E0020A599 /* WebViewController.m */,
-				448447501B6735B70059FF99 /* ViewController.h */,
-				448447511B6735B70059FF99 /* ViewController.m */,
-				440D53AE1B67729200104E13 /* NavigationViewController.h */,
-				440D53AF1B67729200104E13 /* NavigationViewController.m */,
-				44B061BB1B69BAE300FA8AB2 /* EmergencyContactViewController.h */,
-				44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */,
-				44DD18C41B6F2F250020A599 /* PopularLakesViewController.h */,
-				44DD18C51B6F2F250020A599 /* PopularLakesViewController.m */,
-				44DD18FF1B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.h */,
-				44DD19001B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.m */,
-				44DD190E1B7249D20020A599 /* PopularLakesDetailViewController.h */,
-				44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */,
-				44DD18BE1B6F2DB70020A599 /* PhotosViewController.h */,
-				44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */,
-				44DD191C1B734A5F0020A599 /* PhotosCollectionViewCell.h */,
-				44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */,
-				44DD19211B74DD720020A599 /* DetailPhotoViewController.h */,
-				44DD19221B74DD720020A599 /* DetailPhotoViewController.m */,
+				44DA65311B81A79300403160 /* about the park */,
+				44DA65321B81A79B00403160 /* how to get there */,
+				44DA65361B81A80500403160 /* Main view controller */,
+				44DA65331B81A7C400403160 /* emegency contacts */,
+				44DA65341B81A7DC00403160 /* popular lakes */,
+				44DA65351B81A7E700403160 /* Flickr Photo View  */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
