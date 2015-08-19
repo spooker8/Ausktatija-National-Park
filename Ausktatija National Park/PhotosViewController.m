@@ -57,6 +57,16 @@
   
    // NSLog(@"%@",self.flickrPhotos);
     
+    NSDate *today = [NSDate date];
+    NSLog(@"Date is %@",today);
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EE MMM, dd, YYYY"];
+ 
+    
+    NSLog(@"Date is  %@", [dateFormatter stringFromDate:today]);
+    
+    
     
 }
 
