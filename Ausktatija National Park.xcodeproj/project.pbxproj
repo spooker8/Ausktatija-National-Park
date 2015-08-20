@@ -18,6 +18,7 @@
 		448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448447711B674ECF0059FF99 /* SWRevealViewController.m */; };
 		44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B061871B690FC600FA8AB2 /* AboutParkViewController.m */; };
 		44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */; };
+		44DA54491B85616B0026A3AF /* Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DA54481B85616B0026A3AF /* Flickr.m */; };
 		44DD18C01B6F2DB70020A599 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */; };
 		44DD18C31B6F2EC40020A599 /* HowToGetThereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD18C21B6F2EC40020A599 /* HowToGetThereViewController.m */; };
 		44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD18C51B6F2F250020A599 /* PopularLakesViewController.m */; };
@@ -65,6 +66,8 @@
 		44B061871B690FC600FA8AB2 /* AboutParkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutParkViewController.m; sourceTree = "<group>"; };
 		44B061BB1B69BAE300FA8AB2 /* EmergencyContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyContactViewController.h; sourceTree = "<group>"; };
 		44B061BC1B69BAE300FA8AB2 /* EmergencyContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyContactViewController.m; sourceTree = "<group>"; };
+		44DA54471B85616B0026A3AF /* Flickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flickr.h; sourceTree = "<group>"; };
+		44DA54481B85616B0026A3AF /* Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flickr.m; sourceTree = "<group>"; };
 		44DD18BE1B6F2DB70020A599 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
 		44DD18BF1B6F2DB70020A599 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		44DD18C11B6F2EC40020A599 /* HowToGetThereViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToGetThereViewController.h; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				44DD19081B71BFF80020A599 /* PopularLakesModel.m */,
 				44DD19161B7348AC0020A599 /* FlickrModel.h */,
 				44DD19171B7348AC0020A599 /* FlickrModel.m */,
+				44DA54471B85616B0026A3AF /* Flickr.h */,
+				44DA54481B85616B0026A3AF /* Flickr.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */,
 				44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */,
 				44DD19181B7348AC0020A599 /* FlickrModel.m in Sources */,
+				44DA54491B85616B0026A3AF /* Flickr.m in Sources */,
 				44DD190D1B71E4430020A599 /* PlistToModelConverter.m in Sources */,
 				4484474C1B6735B70059FF99 /* main.m in Sources */,
 				44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */,

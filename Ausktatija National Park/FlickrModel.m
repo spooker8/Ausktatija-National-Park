@@ -26,10 +26,10 @@
         
     {
         // Initialize our arrays
-        photoTitles = [[NSMutableArray alloc] init];
-        photoSmallImageData = [[NSMutableArray alloc] init];
-        photoURLsLargeImage = [[NSMutableArray alloc] init];
-        photoURLs= [[NSMutableArray alloc] init];
+        photoTitles = [[NSMutableArray alloc] initWithArray:self.photoTitles];
+        photoSmallImageData = [[NSMutableArray alloc] initWithArray:self.photoSmallImageData];
+        photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
+        photoURLs= [[NSMutableArray alloc] initWithArray:self.photoURLs];
         
         
       [self searchFlickrPhotos];
@@ -89,22 +89,37 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
 //}
 
 -(void)searchFlickrPhotos
+
 {
-    // Build the string to call the Flickr API
+    
+   
+  
+        // Build the string to call the Flickr API
     NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&tags=%@&tag_mode=all&sort=date-taken-desc&api_key=%@&per_page=10&format=json&nojsoncallback=1", @"ignalina" ,FlickrAPIKey];
    
+    
+    
 
     
     // Create NSURL string from formatted string
      NSURL *url = [NSURL URLWithString:urlString];
     
+   //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    
+    
     
     // 2. Get URLResponse string & parse JSON to Foundation objects.
     NSData *jsonData = [NSData dataWithContentsOfURL:url options:NSUTF8StringEncoding error:nil];
+           
+    
+  //  dispatch_async(dispatch_get_main_queue(), ^{
+   
+           
    NSError *error = nil;
     NSDictionary *results = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers  error:&error];
 
-    
+        
+       
     // Store incoming data into a string
   // NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
@@ -114,6 +129,7 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
     // Build an array from the dictionary for easy access to each entry
     NSArray *photos = [[results objectForKey:@"photos"] objectForKey:@"photo"];
     
+       
     // Loop through each entry in the dictionary...
     for (NSDictionary *photo in photos)
     {
@@ -122,9 +138,11 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
     //    NSLog(@"%@",title);
         
         // Save the title to the photo titles array
-        [_photoTitles addObject:(title.length > 0 ? title : @"Untitled")];
+     
         
-        self.photoTitles = [[NSMutableArray alloc] initWithArray:_photoTitles copyItems:NO];
+        [self.photoTitles addObject:(title.length > 0 ? title : @"Untitled")];
+        
+        
         
      //   NSLog(@"title:%@",self.photoTitles);
         
@@ -137,15 +155,15 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
          [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
         
         
-    //    NSLog(@"photoURLString: %@", photoURLString);
+     //  NSLog(@"photoURLString: %@", photoURLString);
         
         // The performance (scrolling) of the table will be much better if we
         // build an array of the image data here, and then add this data as
         // the cell.image value (see cellForRowAtIndexPath:)
-        [_photoSmallImageData addObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:photoURLString]]];
+        [self.photoSmallImageData addObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:photoURLString]]];
         
-        self.photoSmallImageData = [[NSMutableArray alloc ]initWithArray:_photoSmallImageData];
-
+      
+ 
         
         // Build and save the URL to the large image so we can zoom
         // in on the image if requested
@@ -153,14 +171,34 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
         [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_z.jpg",
          [photo objectForKey:@"farm"], [photo objectForKey:@"server"],
          [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
-        [_photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
+        [self.photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
         
-        self.photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:_photoURLsLargeImage];
         
-   //    NSLog(@"photoURLsLareImage: %@\n\n", photoURLString);
+        
+  
+           
+            self.photoTitles = [[NSMutableArray alloc] initWithArray:self.photoTitles copyItems:NO];
+            
+            self.photoSmallImageData = [[NSMutableArray alloc ]initWithArray:self.photoSmallImageData];
+            
+            self.photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
+            
         
       
-    }
+        
+       
+        
+        
+       NSLog(@"photoURLsLareImage: %@\n\n", photoURLString);
+        
+      
+  }
+    
+        
+ //   });
+           
+  //     });
+    
     
     
 }
