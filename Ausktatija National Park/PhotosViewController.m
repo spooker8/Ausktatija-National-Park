@@ -103,14 +103,12 @@
     
     [flickerinfo searchFlickrPhotos];
 
-  //  self.flickrPhotosTitle = flickerinfo.photoTitles;
-  //  self.flickrPhotosImageSmall = flickerinfo.photoSmallImageData;
-  //  self.flickrPhotosImageLarge = flickerinfo.photoURLsLargeImage;
+    self.flickrPhotosTitle = flickerinfo.photoTitles;
+    self.flickrPhotosImageSmall = flickerinfo.photoSmallImageData;
+    self.flickrPhotosImageLarge = flickerinfo.photoURLsLargeImage;
         
 
     
-    
- //   [flickrModel.allFlickrArray addObject:flickrModel];
 
     
     

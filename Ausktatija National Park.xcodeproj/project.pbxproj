@@ -165,7 +165,6 @@
 				4484476F1B674E6B0059FF99 /* SWRevealViewController */,
 				44DD19141B7325A40020A599 /* JSON */,
 				44DD19061B71BF7F0020A599 /* Controller */,
-				44675CA51B88B0B700366C62 /* Reachability */,
 				44DD19041B71BF640020A599 /* Model */,
 				448447491B6735B70059FF99 /* Supporting Files */,
 			);
@@ -175,6 +174,7 @@
 		448447491B6735B70059FF99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44675CA51B88B0B700366C62 /* Reachability */,
 				4484474A1B6735B70059FF99 /* Info.plist */,
 				4484474B1B6735B70059FF99 /* main.m */,
 				44DD19021B71B88A0020A599 /* PopularLakes.plist */,
