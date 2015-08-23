@@ -14,33 +14,33 @@
 
 
 
--(instancetype)initWithphotoNames:(NSMutableArray*)photoTitles
-          WithphotoSmallImageData:(NSMutableArray*)photoSmallImageData
-          photoURLsLargeImageData:(NSMutableArray*)photoURLsLargeImage
-                    WithphotoURLs:(NSMutableArray*)photoURLs
-
-
-{
-    self = [super init];
-    if(self)
-        
-    {
-        // Initialize our arrays
-        photoTitles = [[NSMutableArray alloc] initWithArray:self.photoTitles];
-        photoSmallImageData = [[NSMutableArray alloc] initWithArray:self.photoSmallImageData];
-        photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
-        photoURLs= [[NSMutableArray alloc] initWithArray:self.photoURLs];
-        
-        
-      [self searchFlickrPhotos];
-    }
-    
-    return self;
-
-    
-    
-    
-}
+//-(instancetype)initWithphotoNames:(NSMutableArray*)photoTitles
+//          WithphotoSmallImageData:(NSMutableArray*)photoSmallImageData
+//          photoURLsLargeImageData:(NSMutableArray*)photoURLsLargeImage
+//                    WithphotoURLs:(NSMutableArray*)photoURLs
+//
+//
+//{
+//    self = [super init];
+//    if(self)
+//        
+//    {
+//        // Initialize our arrays
+//        photoTitles = [[NSMutableArray alloc] initWithArray:self.photoTitles];
+//        photoSmallImageData = [[NSMutableArray alloc] initWithArray:self.photoSmallImageData];
+//        photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
+//        photoURLs= [[NSMutableArray alloc] initWithArray:self.photoURLs];
+//        
+//        
+//      [self searchFlickrPhotos];
+//    }
+//    
+//    return self;
+//
+//    
+//    
+//    
+//}
 
 
 NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
@@ -104,7 +104,7 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
     // Create NSURL string from formatted string
      NSURL *url = [NSURL URLWithString:urlString];
     
-   //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+  //     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
     
     
     
@@ -119,13 +119,7 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
     NSDictionary *results = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers  error:&error];
 
         
-       
-    // Store incoming data into a string
-  // NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    
-    // Create a dictionary from the JSON string
-  //  NSDictionary *results = [jsonString SBJson];
-    
+      
     // Build an array from the dictionary for easy access to each entry
     NSArray *photos = [[results objectForKey:@"photos"] objectForKey:@"photo"];
     
@@ -173,31 +167,24 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
          [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
         [self.photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
         
+        self.photoTitles = [[NSMutableArray alloc] initWithArray:self.photoTitles];
+        
+        self.photoSmallImageData = [[NSMutableArray alloc ]initWithArray:self.photoSmallImageData];
+        
+        self.photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
+
         
         
-  
-           
-            self.photoTitles = [[NSMutableArray alloc] initWithArray:self.photoTitles copyItems:NO];
-            
-            self.photoSmallImageData = [[NSMutableArray alloc ]initWithArray:self.photoSmallImageData];
-            
-            self.photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
-            
-        
-      
-        
-       
-        
-        
-       NSLog(@"photoURLsLareImage 1 : %@\n\n", photoURLString);
+                
+       NSLog(@"photoURLsLareImage 1 : %@\n\n", self.allFlickrArray);
         
       
   }
     
         
- //   });
+   // });
            
-  //     });
+   //    });
     
     
     

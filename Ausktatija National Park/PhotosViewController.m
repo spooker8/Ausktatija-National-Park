@@ -59,13 +59,17 @@
     
     [self.view addSubview:self.activityIndicator];
     
-    
+ //   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+ //        dispatch_async(dispatch_get_main_queue(), ^{
   
     [self flickerInit];
     
     NSLog(@"photoTitle 2 : %@\n\n", self.flickrPhotosTitle);
-    
-   
+ 
+ //        });
+ //   });
+
    
     
 }
@@ -90,8 +94,7 @@
 -(void)flickerInit
 {
     
-  //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-    
+ 
     
     
     FlickrModel *flickerinfo = [[FlickrModel alloc] init];
@@ -99,22 +102,17 @@
     
     
     [flickerinfo searchFlickrPhotos];
-    
-  //   dispatch_async(dispatch_get_main_queue(), ^{
-    
-    self.flickrPhotosTitle = flickerinfo.photoTitles;
-    self.flickrPhotosImageSmall = flickerinfo.photoSmallImageData;
-    self.flickrPhotosImageLarge = flickerinfo.photoURLsLargeImage;
+
+  //  self.flickrPhotosTitle = flickerinfo.photoTitles;
+  //  self.flickrPhotosImageSmall = flickerinfo.photoSmallImageData;
+  //  self.flickrPhotosImageLarge = flickerinfo.photoURLsLargeImage;
         
-         
-  //   });
-//});
-
 
     
     
-    
+ //   [flickrModel.allFlickrArray addObject:flickrModel];
 
+    
     
 }
 
@@ -132,11 +130,10 @@
     
     
         
-        NSLog(@"count: %@",self.flickrPhotosTitle);
+     //   NSLog(@"count: %@",self.flickrPhotosTitle);
         
         return [self.flickrPhotosTitle count];
    
-
     
     
     

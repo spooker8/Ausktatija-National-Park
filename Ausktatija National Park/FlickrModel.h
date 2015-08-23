@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Flickr.h"
 
 
 @interface FlickrModel : NSObject
@@ -20,10 +21,10 @@
 @property (strong, nonatomic) NSMutableArray *allFlickrArray; 
 
 
--(instancetype)initWithphotoNames:(NSMutableArray*)photoTitles
-          WithphotoSmallImageData:(NSMutableArray*)photoSmallImageData
-          photoURLsLargeImageData:(NSMutableArray*)photoURLsLargeImage
-                    WithphotoURLs:(NSMutableArray*)photoURLs;
+//-(instancetype)initWithphotoNames:(NSMutableArray*)photoTitles
+//          WithphotoSmallImageData:(NSMutableArray*)photoSmallImageData
+//          photoURLsLargeImageData:(NSMutableArray*)photoURLsLargeImage
+//                    WithphotoURLs:(NSMutableArray*)photoURLs;
 
 
 //-(void)loadFlickrPhotos;
