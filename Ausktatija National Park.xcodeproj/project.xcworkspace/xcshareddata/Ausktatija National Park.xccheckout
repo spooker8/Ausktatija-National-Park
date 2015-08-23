@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A32A6557-C553-4EED-9CEB-2C0A0A0B2340</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ausktatija National Park</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>257607B8E042AC602C3AADF13C779A8931B93B06</key>
+		<string>https://github.com/spooker8/Ausktatija-National-Park.git</string>
+		<key>EA629F7F130FCF7DAF54B48FA435BB0669175B25</key>
+		<string>https://github.com/spooker8/PirateAssigment.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ausktatija National Park.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>257607B8E042AC602C3AADF13C779A8931B93B06</key>
+		<string>../..</string>
+		<key>EA629F7F130FCF7DAF54B48FA435BB0669175B25</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/spooker8/Ausktatija-National-Park.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>257607B8E042AC602C3AADF13C779A8931B93B06</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EA629F7F130FCF7DAF54B48FA435BB0669175B25</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>257607B8E042AC602C3AADF13C779A8931B93B06</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ausktatija-National-Park</string>
+		</dict>
+	</array>
+</dict>
+</plist>

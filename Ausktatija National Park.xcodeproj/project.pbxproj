@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		440D53B01B67729200104E13 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440D53AF1B67729200104E13 /* NavigationViewController.m */; };
+		4417E7571B894BBE000E4D30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4417E7561B894BBE000E4D30 /* SystemConfiguration.framework */; };
+		4417E75B1B894BFC000E4D30 /* InternetCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4417E75A1B894BFC000E4D30 /* InternetCheck.m */; };
 		4484474C1B6735B70059FF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4484474B1B6735B70059FF99 /* main.m */; };
 		4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4484474E1B6735B70059FF99 /* AppDelegate.m */; };
 		448447521B6735B70059FF99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448447511B6735B70059FF99 /* ViewController.m */; };
@@ -47,6 +49,9 @@
 /* Begin PBXFileReference section */
 		440D53AE1B67729200104E13 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		440D53AF1B67729200104E13 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		4417E7561B894BBE000E4D30 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4417E7591B894BFC000E4D30 /* InternetCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternetCheck.h; sourceTree = "<group>"; };
+		4417E75A1B894BFC000E4D30 /* InternetCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetCheck.m; sourceTree = "<group>"; };
 		448447461B6735B70059FF99 /* Ausktatija National Park.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ausktatija National Park.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4484474A1B6735B70059FF99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4484474B1B6735B70059FF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4417E7571B894BBE000E4D30 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,9 +118,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4417E7581B894BC6000E4D30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4417E7561B894BBE000E4D30 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44675CA51B88B0B700366C62 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				4417E7591B894BFC000E4D30 /* InternetCheck.h */,
+				4417E75A1B894BFC000E4D30 /* InternetCheck.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		4484473D1B6735B70059FF99 = {
 			isa = PBXGroup;
 			children = (
+				4417E7581B894BC6000E4D30 /* Frameworks */,
 				448447481B6735B70059FF99 /* Ausktatija National Park */,
 				448447621B6735B70059FF99 /* Ausktatija National ParkTests */,
 				448447471B6735B70059FF99 /* Products */,
@@ -141,6 +165,7 @@
 				4484476F1B674E6B0059FF99 /* SWRevealViewController */,
 				44DD19141B7325A40020A599 /* JSON */,
 				44DD19061B71BF7F0020A599 /* Controller */,
+				44675CA51B88B0B700366C62 /* Reachability */,
 				44DD19041B71BF640020A599 /* Model */,
 				448447491B6735B70059FF99 /* Supporting Files */,
 			);
@@ -342,6 +367,7 @@
 				TargetAttributes = {
 					448447451B6735B70059FF99 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9S8M3BTY75;
 					};
 					4484475E1B6735B70059FF99 = {
 						CreatedOnToolsVersion = 6.4;
@@ -400,6 +426,7 @@
 				44DD19011B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.m in Sources */,
 				44DD18CC1B705B8E0020A599 /* WebViewController.m in Sources */,
 				4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */,
+				4417E75B1B894BFC000E4D30 /* InternetCheck.m in Sources */,
 				44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */,
 				44DD19181B7348AC0020A599 /* FlickrModel.m in Sources */,
 				44DA54491B85616B0026A3AF /* Flickr.m in Sources */,
@@ -539,10 +566,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Ausktatija National Park/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -550,10 +580,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Ausktatija National Park/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

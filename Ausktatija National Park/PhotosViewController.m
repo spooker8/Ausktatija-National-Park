@@ -37,25 +37,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
+    
     self.title = NSLocalizedString(@"Photos of the Park", nil);
     
     [self revealMenuInit];
     
+ 
     
-  //  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        
-   //      dispatch_async(dispatch_get_main_queue(), ^{
+}
+
+
+
+
+-(void)viewWillAppear:(BOOL)animated
+
+{
     
+    self.activityIndicator = [[UIActivityIndicatorView alloc] init];
+    
+    [self.view addSubview:self.activityIndicator];
+    
+    
+  
     [self flickerInit];
-        
-     //    });
-      //   });
-         
-       NSLog(@"photoTitle: %@\n\n", self.flickrPhotosTitle);
-  
-   // NSLog(@"%@",self.flickrPhotos);
     
-  
+    NSLog(@"photoTitle 2 : %@\n\n", self.flickrPhotosTitle);
+    
+   
+   
+    
 }
 
 -(void)revealMenuInit
@@ -65,8 +77,7 @@
     
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    // [self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
-    
+   
     UIBarButtonItem *revealButtonIteam = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"] style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
     
     self.navigationItem.leftBarButtonItem = revealButtonIteam;
@@ -79,35 +90,31 @@
 -(void)flickerInit
 {
     
-   
+  //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    
+    
     
     FlickrModel *flickerinfo = [[FlickrModel alloc] init];
     
     
+    
     [flickerinfo searchFlickrPhotos];
     
-
+  //   dispatch_async(dispatch_get_main_queue(), ^{
     
-  //  self.flickrPhotosTitle = flickerinfo.photoTitles;
-  //  self.flickrPhotosImageSmall = flickerinfo.photoSmallImageData;
-  //  self.flickrPhotosImageLarge = flickerinfo.photoURLsLargeImage;
+    self.flickrPhotosTitle = flickerinfo.photoTitles;
+    self.flickrPhotosImageSmall = flickerinfo.photoSmallImageData;
+    self.flickrPhotosImageLarge = flickerinfo.photoURLsLargeImage;
         
-    
-    
+         
+  //   });
+//});
 
 
     
-    [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
-    
-        
-        [self.collectionView reloadData];
     
     
-    self.activityIndicator = [[UIActivityIndicatorView alloc] init];
-    
-    [self.view addSubview:self.activityIndicator];
-    
-    
+
     
 }
 
@@ -124,9 +131,13 @@
 {
     
     
-    return [self.flickrPhotosTitle count];
-  
+        
+        NSLog(@"count: %@",self.flickrPhotosTitle);
+        
+        return [self.flickrPhotosTitle count];
+   
 
+    
     
     
 }
@@ -135,7 +146,10 @@
 {
     
     
+    
     PhotosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PHOTOCELL" forIndexPath:indexPath];
+    
+   
     
     cell.layer.shouldRasterize = YES;
     cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
@@ -144,16 +158,19 @@
     
     cell.photoName.text = [self.flickrPhotosTitle objectAtIndex:indexPath.row];
     
+    NSLog(@"photo title 4 : %@", cell.photoName.text);
+    
    //  Load image in background  --
      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-          
+    
+        
     NSData *imageData = [self.flickrPhotosImageSmall objectAtIndex:indexPath.row];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+     dispatch_async(dispatch_get_main_queue(), ^{
     
     cell.parkPhoto.image = [UIImage imageWithData:imageData];
         
-        NSLog(@"uicollectionview: %@",cell.parkPhoto.image);
+        NSLog(@"uicollectionview 5: %@",cell.parkPhoto.image);
     
 });
         

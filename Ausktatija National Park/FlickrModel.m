@@ -189,7 +189,7 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
        
         
         
-       NSLog(@"photoURLsLareImage: %@\n\n", photoURLString);
+       NSLog(@"photoURLsLareImage 1 : %@\n\n", photoURLString);
         
       
   }
