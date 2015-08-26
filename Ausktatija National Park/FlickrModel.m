@@ -43,7 +43,7 @@
 //}
 
 
-NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
+//NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
 
 
 //-(void)loadFlickrPhotos
@@ -88,106 +88,101 @@ NSString *const FlickrAPIKey = @"5cc923d34e732dab392d7cb0285acf31";
 
 //}
 
--(void)searchFlickrPhotos
-
-{
-    
-   
-  
-        // Build the string to call the Flickr API
-    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&tags=%@&tag_mode=all&sort=date-taken-desc&api_key=%@&per_page=10&format=json&nojsoncallback=1", @"ignalina" ,FlickrAPIKey];
-   
-    
-    
-
-    
-    // Create NSURL string from formatted string
-     NSURL *url = [NSURL URLWithString:urlString];
-    
-  //     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-    
-    
-    
-    // 2. Get URLResponse string & parse JSON to Foundation objects.
-    NSData *jsonData = [NSData dataWithContentsOfURL:url options:NSUTF8StringEncoding error:nil];
-           
-    
-  //  dispatch_async(dispatch_get_main_queue(), ^{
-   
-           
-   NSError *error = nil;
-    NSDictionary *results = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers  error:&error];
-
-        
-      
-    // Build an array from the dictionary for easy access to each entry
-    NSArray *photos = [[results objectForKey:@"photos"] objectForKey:@"photo"];
-    
-       
-    // Loop through each entry in the dictionary...
-    for (NSDictionary *photo in photos)
-    {
-        // Get title of the image
-        NSString *title = [photo objectForKey:@"title"];
-    //    NSLog(@"%@",title);
-        
-        // Save the title to the photo titles array
-     
-        
-        [self.photoTitles addObject:(title.length > 0 ? title : @"Untitled")];
-        
-        
-        
-     //   NSLog(@"title:%@",self.photoTitles);
-        
-        // Build the URL to where the image is stored (see the Flickr API)
-        // In the format http://farmX.static.flickr.com/server/id_secret.jpg
-        // Notice the "_s" which requests a "small" image 75 x 75 pixels
-        NSString *photoURLString =
-        [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_s.jpg",
-         [photo objectForKey:@"farm"], [photo objectForKey:@"server"],
-         [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
-        
-        
-     //  NSLog(@"photoURLString: %@", photoURLString);
-        
-        // The performance (scrolling) of the table will be much better if we
-        // build an array of the image data here, and then add this data as
-        // the cell.image value (see cellForRowAtIndexPath:)
-        [self.photoSmallImageData addObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:photoURLString]]];
-        
-      
- 
-        
-        // Build and save the URL to the large image so we can zoom
-        // in on the image if requested
-        photoURLString =
-        [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_z.jpg",
-         [photo objectForKey:@"farm"], [photo objectForKey:@"server"],
-         [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
-        [self.photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
-        
-        self.photoTitles = [[NSMutableArray alloc] initWithArray:self.photoTitles];
-        
-        self.photoSmallImageData = [[NSMutableArray alloc ]initWithArray:self.photoSmallImageData];
-        
-        self.photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
-
-        
-        
-                
-       NSLog(@"photoURLsLareImage 1 : %@\n\n", self.allFlickrArray);
-        
-      
-  }
-    
-        
-   // });
-           
-   //    });
-    
-    
-    
-}
+//-(void)searchFlickrPhotos
+//
+//{
+//    
+//   
+//  
+//        // Build the string to call the Flickr API
+//    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&tags=%@&tag_mode=all&sort=date-taken-desc&api_key=%@&per_page=10&format=json&nojsoncallback=1", @"ignalina" ,FlickrAPIKey];
+//   
+//    
+//    
+//
+//    
+//    // Create NSURL string from formatted string
+//     NSURL *url = [NSURL URLWithString:urlString];
+//    
+//  
+//    
+//    // 2. Get URLResponse string & parse JSON to Foundation objects.
+//    NSData *jsonData = [NSData dataWithContentsOfURL:url options:NSUTF8StringEncoding error:nil];
+//           
+//    
+//    
+//           
+//   NSError *error;
+//    NSDictionary *results = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers  error:&error];
+//
+//        
+//      
+//    // Build an array from the dictionary for easy access to each entry
+//    NSArray *photos = [[results objectForKey:@"photos"] objectForKey:@"photo"];
+//    
+//       
+//    // Loop through each entry in the dictionary...
+//    for (NSDictionary *photo in photos)
+//    {
+//        // Get title of the image
+//        NSString *title = [photo objectForKey:@"title"];
+//    //    NSLog(@"%@",title);
+//        
+//        // Save the title to the photo titles array
+//     
+//        
+//        [self.photoTitles addObject:(title.length > 0 ? title : @"Untitled")];
+//        
+//        
+//        
+//     //   NSLog(@"title:%@",self.photoTitles);
+//        
+//        // Build the URL to where the image is stored (see the Flickr API)
+//        // In the format http://farmX.static.flickr.com/server/id_secret.jpg
+//        // Notice the "_s" which requests a "small" image 75 x 75 pixels
+//        NSString *photoURLString =
+//        [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_s.jpg",
+//         [photo objectForKey:@"farm"], [photo objectForKey:@"server"],
+//         [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
+//        
+//        
+//     //  NSLog(@"photoURLString: %@", photoURLString);
+//        
+//        // The performance (scrolling) of the table will be much better if we
+//        // build an array of the image data here, and then add this data as
+//        // the cell.image value (see cellForRowAtIndexPath:)
+//        [self.photoSmallImageData addObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:photoURLString]]];
+//        
+//      
+// 
+//        
+//        // Build and save the URL to the large image so we can zoom
+//        // in on the image if requested
+//        photoURLString =
+//        [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_z.jpg",
+//         [photo objectForKey:@"farm"], [photo objectForKey:@"server"],
+//         [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
+//        [self.photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
+//        
+//        self.photoTitles = [[NSMutableArray alloc] initWithArray:self.photoTitles];
+//        
+//        self.photoSmallImageData = [[NSMutableArray alloc ]initWithArray:self.photoSmallImageData];
+//        
+//        self.photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
+//
+//        
+//        
+//                
+//       NSLog(@"photoURLsLareImage 1 : %@\n\n", self.allFlickrArray);
+//        
+//      
+//  }
+//    
+//        
+//  
+//    
+//    
+//    
+//}
 
 @end

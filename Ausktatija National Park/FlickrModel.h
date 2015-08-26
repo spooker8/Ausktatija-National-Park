@@ -13,12 +13,12 @@
 @interface FlickrModel : NSObject
 
 
-@property (strong, nonatomic) NSMutableArray *photoTitles;  //image title
-@property (strong, nonatomic) NSMutableArray *photoSmallImageData; //image thumbnail
-@property (strong, nonatomic) NSMutableArray *photoURLsLargeImage; //large image
-@property (strong, nonatomic) NSMutableArray *photoURLs; //URL to large image
-
-@property (strong, nonatomic) NSMutableArray *allFlickrArray; 
+//@property (strong, nonatomic) NSMutableArray *photoTitles;  //image title
+//@property (strong, nonatomic) NSMutableArray *photoSmallImageData; //image thumbnail
+//@property (strong, nonatomic) NSMutableArray *photoURLsLargeImage; //large image
+//@property (strong, nonatomic) NSMutableArray *photoURLs; //URL to large image
+//
+//@property (strong, nonatomic) NSMutableArray *allFlickrArray; 
 
 
 //-(instancetype)initWithphotoNames:(NSMutableArray*)photoTitles
@@ -28,7 +28,7 @@
 
 
 //-(void)loadFlickrPhotos;
--(void)searchFlickrPhotos;
+//-(void)searchFlickrPhotos;
 
 
 

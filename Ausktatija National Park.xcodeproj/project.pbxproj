@@ -34,6 +34,10 @@
 		44DD19181B7348AC0020A599 /* FlickrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD19171B7348AC0020A599 /* FlickrModel.m */; };
 		44DD191E1B734A5F0020A599 /* PhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */; };
 		44DD19231B74DD720020A599 /* DetailPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD19221B74DD720020A599 /* DetailPhotoViewController.m */; };
+		44DDC4C21B8C309E00E99439 /* FlickrModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DDC4C11B8C309E00E99439 /* FlickrModel2.m */; };
+		44DDC4C51B8C30B000E99439 /* FlickrAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DDC4C41B8C30B000E99439 /* FlickrAPIHelper.m */; };
+		44DDC4C81B8C30CC00E99439 /* FlickrParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DDC4C71B8C30CC00E99439 /* FlickrParser.m */; };
+		44DDC4CB1B8C30EF00E99439 /* FlickrImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DDC4CA1B8C30EF00E99439 /* FlickrImageDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,14 @@
 		44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewCell.m; sourceTree = "<group>"; };
 		44DD19211B74DD720020A599 /* DetailPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPhotoViewController.h; sourceTree = "<group>"; };
 		44DD19221B74DD720020A599 /* DetailPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPhotoViewController.m; sourceTree = "<group>"; };
+		44DDC4C01B8C309E00E99439 /* FlickrModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrModel2.h; sourceTree = "<group>"; };
+		44DDC4C11B8C309E00E99439 /* FlickrModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrModel2.m; sourceTree = "<group>"; };
+		44DDC4C31B8C30B000E99439 /* FlickrAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIHelper.h; sourceTree = "<group>"; };
+		44DDC4C41B8C30B000E99439 /* FlickrAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrAPIHelper.m; sourceTree = "<group>"; };
+		44DDC4C61B8C30CC00E99439 /* FlickrParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrParser.h; sourceTree = "<group>"; };
+		44DDC4C71B8C30CC00E99439 /* FlickrParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrParser.m; sourceTree = "<group>"; };
+		44DDC4C91B8C30EF00E99439 /* FlickrImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrImageDownloader.h; sourceTree = "<group>"; };
+		44DDC4CA1B8C30EF00E99439 /* FlickrImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrImageDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +317,7 @@
 				44DA65331B81A7C400403160 /* emegency contacts */,
 				44DA65341B81A7DC00403160 /* popular lakes */,
 				44DA65351B81A7E700403160 /* Flickr Photo View  */,
+				44DDC4BF1B8C306300E99439 /* FlickrPhotoViewNewTesting */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -316,6 +329,21 @@
 				44DD190C1B71E4430020A599 /* PlistToModelConverter.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		44DDC4BF1B8C306300E99439 /* FlickrPhotoViewNewTesting */ = {
+			isa = PBXGroup;
+			children = (
+				44DDC4C01B8C309E00E99439 /* FlickrModel2.h */,
+				44DDC4C11B8C309E00E99439 /* FlickrModel2.m */,
+				44DDC4C31B8C30B000E99439 /* FlickrAPIHelper.h */,
+				44DDC4C41B8C30B000E99439 /* FlickrAPIHelper.m */,
+				44DDC4C61B8C30CC00E99439 /* FlickrParser.h */,
+				44DDC4C71B8C30CC00E99439 /* FlickrParser.m */,
+				44DDC4C91B8C30EF00E99439 /* FlickrImageDownloader.h */,
+				44DDC4CA1B8C30EF00E99439 /* FlickrImageDownloader.m */,
+			);
+			name = FlickrPhotoViewNewTesting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,11 +450,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				448447521B6735B70059FF99 /* ViewController.m in Sources */,
+				44DDC4C21B8C309E00E99439 /* FlickrModel2.m in Sources */,
 				440D53B01B67729200104E13 /* NavigationViewController.m in Sources */,
 				44DD19011B71B5A10020A599 /* PopularLakesCollectionViewCollectionViewCell.m in Sources */,
 				44DD18CC1B705B8E0020A599 /* WebViewController.m in Sources */,
 				4484474F1B6735B70059FF99 /* AppDelegate.m in Sources */,
 				4417E75B1B894BFC000E4D30 /* InternetCheck.m in Sources */,
+				44DDC4CB1B8C30EF00E99439 /* FlickrImageDownloader.m in Sources */,
 				44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */,
 				44DD19181B7348AC0020A599 /* FlickrModel.m in Sources */,
 				44DA54491B85616B0026A3AF /* Flickr.m in Sources */,
@@ -435,6 +465,8 @@
 				44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */,
 				44DD19231B74DD720020A599 /* DetailPhotoViewController.m in Sources */,
 				44DD18C01B6F2DB70020A599 /* PhotosViewController.m in Sources */,
+				44DDC4C81B8C30CC00E99439 /* FlickrParser.m in Sources */,
+				44DDC4C51B8C30B000E99439 /* FlickrAPIHelper.m in Sources */,
 				44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */,
 				448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */,
 				44DD18C31B6F2EC40020A599 /* HowToGetThereViewController.m in Sources */,
