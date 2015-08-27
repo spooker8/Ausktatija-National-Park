@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FlickrModel.h"
+
 
 @interface PhotosCollectionViewCell : UICollectionViewCell
 

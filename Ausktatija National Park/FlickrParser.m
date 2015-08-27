@@ -21,7 +21,7 @@
     
     NSError *error;
     
-    NSDictionary *results = [NSJSONSerialization JSONObjectWithData:flickrData options:NSJSONReadingMutableContainers  error:&error];
+    NSDictionary *results = [NSJSONSerialization JSONObjectWithData:flickrData options:kNilOptions  error:&error];
     
     
     

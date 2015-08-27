@@ -31,7 +31,6 @@
 		44DD190D1B71E4430020A599 /* PlistToModelConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD190C1B71E4430020A599 /* PlistToModelConverter.m */; };
 		44DD19101B7249D20020A599 /* PopularLakesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */; };
 		44DD19151B7325A40020A599 /* JSON in Resources */ = {isa = PBXBuildFile; fileRef = 44DD19141B7325A40020A599 /* JSON */; };
-		44DD19181B7348AC0020A599 /* FlickrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD19171B7348AC0020A599 /* FlickrModel.m */; };
 		44DD191E1B734A5F0020A599 /* PhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */; };
 		44DD19231B74DD720020A599 /* DetailPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DD19221B74DD720020A599 /* DetailPhotoViewController.m */; };
 		44DDC4C21B8C309E00E99439 /* FlickrModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DDC4C11B8C309E00E99439 /* FlickrModel2.m */; };
@@ -95,8 +94,6 @@
 		44DD190E1B7249D20020A599 /* PopularLakesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularLakesDetailViewController.h; sourceTree = "<group>"; };
 		44DD190F1B7249D20020A599 /* PopularLakesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularLakesDetailViewController.m; sourceTree = "<group>"; };
 		44DD19141B7325A40020A599 /* JSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JSON; sourceTree = "<group>"; };
-		44DD19161B7348AC0020A599 /* FlickrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrModel.h; sourceTree = "<group>"; };
-		44DD19171B7348AC0020A599 /* FlickrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrModel.m; sourceTree = "<group>"; };
 		44DD191C1B734A5F0020A599 /* PhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewCell.h; sourceTree = "<group>"; };
 		44DD191D1B734A5F0020A599 /* PhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewCell.m; sourceTree = "<group>"; };
 		44DD19211B74DD720020A599 /* DetailPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPhotoViewController.h; sourceTree = "<group>"; };
@@ -291,8 +288,6 @@
 			children = (
 				44DD19071B71BFF80020A599 /* PopularLakesModel.h */,
 				44DD19081B71BFF80020A599 /* PopularLakesModel.m */,
-				44DD19161B7348AC0020A599 /* FlickrModel.h */,
-				44DD19171B7348AC0020A599 /* FlickrModel.m */,
 				44DA54471B85616B0026A3AF /* Flickr.h */,
 				44DA54481B85616B0026A3AF /* Flickr.m */,
 			);
@@ -458,7 +453,6 @@
 				4417E75B1B894BFC000E4D30 /* InternetCheck.m in Sources */,
 				44DDC4CB1B8C30EF00E99439 /* FlickrImageDownloader.m in Sources */,
 				44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */,
-				44DD19181B7348AC0020A599 /* FlickrModel.m in Sources */,
 				44DA54491B85616B0026A3AF /* Flickr.m in Sources */,
 				44DD190D1B71E4430020A599 /* PlistToModelConverter.m in Sources */,
 				4484474C1B6735B70059FF99 /* main.m in Sources */,
