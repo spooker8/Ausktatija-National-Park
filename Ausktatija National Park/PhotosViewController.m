@@ -31,11 +31,29 @@
 @property (strong, nonatomic)UIActivityIndicatorView *activityIndicator;
 
 
+
+
 @end
 
 
 
 @implementation PhotosViewController
+
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self downloadFlickrData];
+    
+    [self.collectionView reloadData];
+    
+    [self.collectionView layoutIfNeeded];
+    
+    
+    
+}
+
 
 
 - (void)viewDidLoad {
@@ -47,10 +65,6 @@
     [self revealMenuInit];
   
 
-    [self downloadFlickrData];
-    
-    
-    [self.collectionView reloadData];
     
     
     
@@ -95,6 +109,8 @@
 
      [self.activityIndicator startAnimating];
     
+    
+    
     FlickrAPIHelper *flickrAPIHelper = [[FlickrAPIHelper alloc] init];
     
     //Use blocks
@@ -110,12 +126,13 @@
         
         self.flickrPhotosTitle = flickrPhotos.photoTitles;
         self.flickrPhotosImageSmall = flickrPhotos.photoSmallImageData;
-        self.flickrPhotosImageLarge = flickrPhotos.photoURLsLargeImage;
+      //  self.flickrPhotosImageLarge = flickrPhotos.photoURLsLargeImage;
         
         NSLog(@" data check from downloadFlickrData method %@",self.flickrPhotosTitle);
         
-       
-        [self.activityIndicator stopAnimating];
+         [self.collectionView reloadData];
+        
+         [self.activityIndicator stopAnimating];
         
     }];
     
@@ -157,18 +174,14 @@
 {
     
     
-    
-    NSLog(@"count %@",self.flickrPhotosTitle);
-    
-    if ([self.flickrPhotosTitle count]) {
+ if([self.flickrPhotosTitle count])
+ {
         return [self.flickrPhotosTitle count];
-    }
-    
+   
+}
+
     return 0;
-    
 
-
-    
     
 }
 
@@ -184,27 +197,18 @@
     cell.layer.shouldRasterize = YES;
     cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
     
+    
   
     
     cell.photoName.text = [self.flickrPhotosTitle objectAtIndex:indexPath.row];
     
-  //  NSLog(@"photo title 4 : %@", cell.photoName.text);
     
-   //  Load image in background  --
-   //  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-    
-        
     NSData *imageData = [self.flickrPhotosImageSmall objectAtIndex:indexPath.row];
-    
-   //  dispatch_async(dispatch_get_main_queue(), ^{
-    
     cell.parkPhoto.image = [UIImage imageWithData:imageData];
         
-        NSLog(@"uicollectionview 5: %@",cell.parkPhoto.image);
+    NSLog(@"uicollectionview 5: %@",cell.parkPhoto.image);
     
-//});
-        
-     //  });
+    
     
     return cell;
 }

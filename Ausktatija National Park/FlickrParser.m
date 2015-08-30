@@ -75,18 +75,18 @@
         
         // Build and save the URL to the large image so we can zoom
         // in on the image if requested
-        photoURLString =
-        [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_z.jpg",
-         [photo objectForKey:@"farm"], [photo objectForKey:@"server"],
-         [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
-      
-          [self.photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
-        
-        
-            self.photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
-      
-            flickrModel2Instance.photoURLsLargeImage = self.photoURLsLargeImage;
-    
+//        photoURLString =
+//        [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_z.jpg",
+//         [photo objectForKey:@"farm"], [photo objectForKey:@"server"],
+//         [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
+//      
+//          [self.photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
+//        
+//        
+//            self.photoURLsLargeImage = [[NSMutableArray alloc] initWithArray:self.photoURLsLargeImage];
+//      
+//            flickrModel2Instance.photoURLsLargeImage = self.photoURLsLargeImage;
+//    
     
     }
 
