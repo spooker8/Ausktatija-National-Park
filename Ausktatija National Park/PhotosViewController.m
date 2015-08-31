@@ -28,8 +28,8 @@
 @property (strong, nonatomic)NSMutableArray *flickrPhotosImageLarge;
 @property (strong, nonatomic)NSMutableArray *flickrPhotosUrls;
 @property (strong, nonatomic)NSIndexPath *selectedIndexPath;
-@property (strong, nonatomic)UIActivityIndicatorView *activityIndicator;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 
 
@@ -203,12 +203,20 @@
     cell.photoName.text = [self.flickrPhotosTitle objectAtIndex:indexPath.row];
     
     
+    
+     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    
+    
     NSData *imageData = [self.flickrPhotosImageSmall objectAtIndex:indexPath.row];
-    cell.parkPhoto.image = [UIImage imageWithData:imageData];
+   
+         dispatch_async(dispatch_get_main_queue(), ^{
+         
+         cell.parkPhoto.image = [UIImage imageWithData:imageData];
         
     NSLog(@"uicollectionview 5: %@",cell.parkPhoto.image);
     
-    
+         });
+     });
     
     return cell;
 }

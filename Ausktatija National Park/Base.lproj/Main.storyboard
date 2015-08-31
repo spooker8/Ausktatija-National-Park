@@ -136,6 +136,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Hgg-lP-XXb" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="klT-5c-oTY"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="seven" textLabel="swn-1S-YAV" style="IBUITableViewCellStyleDefault" id="7EK-IU-QeY">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -333,7 +336,7 @@ Sixty-four species of plant, eight species of fungus and 48 species of bird foun
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d26-6C-1j6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179.5" y="590.5"/>
+            <point key="canvasLocation" x="168.5" y="590.5"/>
         </scene>
         <!--Emergency Contact View Controller-->
         <scene sceneID="q0w-CW-GqM">
@@ -456,9 +459,6 @@ Lithuania
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="bFY-5p-FSg">
-                                <rect key="frame" x="0.0" y="29" width="375" height="609"/>
-                            </activityIndicatorView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Htf-a9-ecO">
                                 <rect key="frame" x="0.0" y="-5" width="375" height="44"/>
                                 <items>
@@ -474,6 +474,11 @@ Lithuania
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" id="Dfn-sl-HPW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="609"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PHOTOCELL" id="yvg-fE-d9s" customClass="PhotosCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -511,12 +516,107 @@ Lithuania
                     <navigationItem key="navigationItem" id="kbF-AU-Bvc"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Dfn-sl-HPW" id="NCd-kS-N1s"/>
                         <outlet property="collectionView" destination="hbG-lo-Hsp" id="zxo-uQ-B2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVp-8U-hRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.5" y="634.5"/>
+        </scene>
+        <!--National Park Map View Controller-->
+        <scene sceneID="R16-4J-nUW">
+            <objects>
+                <viewController id="tHA-L9-lEU" customClass="NationalParkMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wcM-Ci-097"/>
+                        <viewControllerLayoutGuide type="bottom" id="dgB-ao-tWi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bzp-RR-6cn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-cI-06v">
+                                <rect key="frame" x="88" y="131" width="150" height="76"/>
+                                <state key="normal" title="Image Map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oMv-fu-zwf" kind="show" id="0hp-kg-Skh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gl-36-GEq">
+                                <rect key="frame" x="88" y="366" width="150" height="76"/>
+                                <state key="normal" title="GPS Map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ymp-rK-wAE" kind="show" id="TD1-qz-OxX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xy4-XM-O3z"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1py-Vj-cps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584.5" y="1390.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rDS-Yh-eTx">
+            <objects>
+                <viewController id="Z1S-JG-bur" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mj1-lh-nNn"/>
+                        <viewControllerLayoutGuide type="bottom" id="67b-wE-fa4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3gg-kc-6A6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5uu-KS-OCe"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0V-Du-7rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673.5" y="1874.5"/>
+        </scene>
+        <!--Image Map View Controller-->
+        <scene sceneID="LEy-aQ-xgC">
+            <objects>
+                <viewController id="qV8-Sr-RdX" customClass="ImageMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HHR-Yu-ToC"/>
+                        <viewControllerLayoutGuide type="bottom" id="0dg-al-kyp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wGH-2D-8Vf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v4S-tI-tiK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="731"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="qV8-Sr-RdX" id="OtY-Zp-Dw6"/>
+                                    <outletCollection property="gestureRecognizers" destination="qAV-Sj-Pd0" appends="YES" id="Ql4-Mt-Evx"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NiZ-y8-FP1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrollView" destination="v4S-tI-tiK" id="Yva-ew-WIR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0O-LG-F9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qAV-Sj-Pd0"/>
+            </objects>
+            <point key="canvasLocation" x="2678.5" y="1140.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5g8-jC-8NF">
@@ -953,6 +1053,63 @@ Lithuania
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGb-Ua-8Ds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1033.5" y="-2341.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GmB-et-xHa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hgg-lP-XXb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OmF-i7-tP4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tHA-L9-lEU" kind="relationship" relationship="rootViewController" id="9R7-6N-3wi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jyz-N2-wbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081.5" y="1390.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sha-xZ-lcs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ymp-rK-wAE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Sx-aK-MqL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z1S-JG-bur" kind="relationship" relationship="rootViewController" id="fkZ-Ez-kVA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5FP-1S-izt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="1866"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tNS-Yn-JUc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oMv-fu-zwf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EfP-0G-dql">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qV8-Sr-RdX" kind="relationship" relationship="rootViewController" id="nqk-7Q-HaM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ybz-kU-Xy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2129.5" y="1140.5"/>
         </scene>
     </scenes>
     <resources>
