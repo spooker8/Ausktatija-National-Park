@@ -59,12 +59,6 @@
 }
 
 
--(void)tap:(UITapGestureRecognizer *)tapGestureRe
-
-
-
-
-
 
 
 
