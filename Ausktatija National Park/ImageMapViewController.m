@@ -7,6 +7,7 @@
 //
 
 #import "ImageMapViewController.h"
+#import "SWRevealViewController.h"
 
 @interface ImageMapViewController ()
 
@@ -17,10 +18,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = NSLocalizedString(@"National Park Map", nil);
+    
+    [self revealMenuInit];
+    
+
+    
+    
     [self imageScroller];
     // Do any additional setup after loading the view.
 }
 
+
+-(void)revealMenuInit
+{
+    
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    
+    UIBarButtonItem *revealButtonIteam = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"] style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
+    
+    self.navigationItem.leftBarButtonItem = revealButtonIteam;
+    
+    
+}
 
 
 

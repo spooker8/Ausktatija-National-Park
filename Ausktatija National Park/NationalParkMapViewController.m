@@ -48,7 +48,19 @@
 
 
 
+- (IBAction)imageMapButtonItemPressed:(id)sender {
+    
+    [self performSegueWithIdentifier:@"imagemapsegue" sender:nil];
+    
+    
+}
 
+- (IBAction)GPSMapButtonItemPressed:(id)sender {
+    
+    [self performSegueWithIdentifier:@"gpsmapsegue" sender:nil];
+    
+    
+}
 
 
 

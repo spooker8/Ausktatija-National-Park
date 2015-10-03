@@ -39,6 +39,9 @@
 		44DDC4C51B8C30B000E99439 /* FlickrAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DDC4C41B8C30B000E99439 /* FlickrAPIHelper.m */; };
 		44DDC4C81B8C30CC00E99439 /* FlickrParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DDC4C71B8C30CC00E99439 /* FlickrParser.m */; };
 		44DDC4CB1B8C30EF00E99439 /* FlickrImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DDC4CA1B8C30EF00E99439 /* FlickrImageDownloader.m */; };
+		44E017161BBD21D600067AC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E017151BBD21D600067AC8 /* MapKit.framework */; };
+		44E0171B1BBD5AD700067AC8 /* GPSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E0171A1BBD5AD700067AC8 /* GPSMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44E0171D1BBD5E7200067AC8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E0171C1BBD5E7200067AC8 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,10 @@
 		44DDC4C71B8C30CC00E99439 /* FlickrParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrParser.m; sourceTree = "<group>"; };
 		44DDC4C91B8C30EF00E99439 /* FlickrImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrImageDownloader.h; sourceTree = "<group>"; };
 		44DDC4CA1B8C30EF00E99439 /* FlickrImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrImageDownloader.m; sourceTree = "<group>"; };
+		44E017151BBD21D600067AC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		44E017191BBD5AD700067AC8 /* GPSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSMapViewController.h; sourceTree = "<group>"; };
+		44E0171A1BBD5AD700067AC8 /* GPSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSMapViewController.m; sourceTree = "<group>"; };
+		44E0171C1BBD5E7200067AC8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E0171D1BBD5E7200067AC8 /* CoreLocation.framework in Frameworks */,
+				44E017161BBD21D600067AC8 /* MapKit.framework in Frameworks */,
 				4417E7571B894BBE000E4D30 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +145,8 @@
 		4417E7581B894BC6000E4D30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44E0171C1BBD5E7200067AC8 /* CoreLocation.framework */,
+				44E017151BBD21D600067AC8 /* MapKit.framework */,
 				4417E7561B894BBE000E4D30 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
@@ -246,6 +257,8 @@
 		4494C19C1B9418F600DEE032 /* GPSMap */ = {
 			isa = PBXGroup;
 			children = (
+				44E017191BBD5AD700067AC8 /* GPSMapViewController.h */,
+				44E0171A1BBD5AD700067AC8 /* GPSMapViewController.m */,
 			);
 			name = GPSMap;
 			sourceTree = "<group>";
@@ -490,6 +503,7 @@
 				44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */,
 				44DA54491B85616B0026A3AF /* Flickr.m in Sources */,
 				44DD190D1B71E4430020A599 /* PlistToModelConverter.m in Sources */,
+				44E0171B1BBD5AD700067AC8 /* GPSMapViewController.m in Sources */,
 				4484474C1B6735B70059FF99 /* main.m in Sources */,
 				44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */,
 				44DD19231B74DD720020A599 /* DetailPhotoViewController.m in Sources */,
