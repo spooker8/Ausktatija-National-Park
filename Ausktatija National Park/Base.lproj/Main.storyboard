@@ -692,25 +692,27 @@ Lithuania
                                     <outlet property="delegate" destination="Z1S-JG-bur" id="nLk-Gi-fHq"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-zF-Y86">
-                                <rect key="frame" x="20" y="617" width="94" height="30"/>
-                                <animations/>
-                                <state key="normal" title="My Location"/>
-                                <connections>
-                                    <action selector="myCurrentLocation:" destination="Z1S-JG-bur" eventType="touchUpInside" id="e1U-WW-UUv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43l-NV-VfN">
-                                <rect key="frame" x="135" y="617" width="104" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Bicycle Route 1"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rag-Ns-SSJ">
                                 <rect key="frame" x="26" y="72" width="329" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z58-zF-Y86">
+                                <rect key="frame" x="12" y="524" width="94" height="30"/>
+                                <animations/>
+                                <state key="normal" title="My Location"/>
+                                <connections>
+                                    <action selector="myCurrentLocation:" destination="Z1S-JG-bur" eventType="touchUpInside" id="e1U-WW-UUv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apf-mC-2dy">
+                                <rect key="frame" x="12" y="552" width="156" height="30"/>
+                                <state key="normal" title="Back to Park Boundary"/>
+                                <connections>
+                                    <action selector="backToParkBoundaryItemPressed:" destination="Z1S-JG-bur" eventType="touchUpInside" id="4vj-QJ-Lfq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

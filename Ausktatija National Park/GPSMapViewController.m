@@ -27,7 +27,16 @@
    [super viewDidLoad];
     
    [self startCoreLocation];
+    
+      
+    self.mapView.mapType = MKMapTypeStandard;
+    self.mapView.scrollEnabled = YES;
+    self.mapView.zoomEnabled = YES;
+    [self.mapView setDelegate:self];
+    
    [self drawNationalParkArea];
+   [self parkBoundaryCheck];
+    
     
     
 }
@@ -45,6 +54,47 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark park boundary user location
+
+-(void)parkBoundaryCheck
+{
+    
+    
+    if (self.mapView.userLocation.location.horizontalAccuracy > 0) {
+        
+        CLLocationCoordinate2D userLocation = self.mapView.userLocation.location.coordinate;
+        MKMapPoint userPoint = MKMapPointForCoordinate(userLocation);
+        BOOL inside = MKMapRectContainsPoint(self.mapRect, userPoint);
+        
+        
+        NSLog(@"Inside the park ? : %@", (inside) ? @"YES"  : @"NO");
+        
+        if (inside == YES ) {
+            
+            self.mapView.showsUserLocation = YES;
+            
+            [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
+            
+            self.notInBoundaryAlertLabel.text = @"";
+            
+            
+            
+        } else if (inside == NO) {
+            
+            
+            self.notInBoundaryAlertLabel.text = @"You are not in the National Park Boundary";
+            
+            
+        }
+        
+    }
+
+    
+    
+    
 }
 
 
@@ -73,6 +123,9 @@
     // set zoom to rect &amp; you are done.
     [self.mapView setVisibleMapRect:mapRect animated:YES];
     
+    
+    
+
     
 }
 
@@ -118,36 +171,7 @@
     NSLog(@"%.8f",longitude);
     
     
-     if (self.mapView.userLocation.location.horizontalAccuracy > 0) {
-    
-    CLLocationCoordinate2D userLocation = self.mapView.userLocation.location.coordinate;
-    MKMapPoint userPoint = MKMapPointForCoordinate(userLocation);
-    BOOL inside = MKMapRectContainsPoint(self.mapRect, userPoint);
-    
-    
-    NSLog(@"Inside the park ? : %@", (inside) ? @"YES"  : @"NO");
-    
-    if (inside == YES ) {
-        
-        self.mapView.showsUserLocation = YES;
-        
-        [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
-        
-        self.notInBoundaryAlertLabel.text = @"";
-        
-        
-        
-    } else if (inside == NO) {
-        
-        
-        self.notInBoundaryAlertLabel.text = @"You are not in the National Park Boundary";
-        
-        
-            }
-
-        }
-         
-     }
+       }
     
     
 
@@ -160,7 +184,7 @@
     //do something with userLocation...
 }
 
-
+#pragma mark Buttons
 
 - (IBAction)myCurrentLocation:(id)sender {
    
@@ -199,23 +223,31 @@
 }
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.mapView.delegate = self;
-    
-    self.locationManager = [[CLLocationManager alloc] init];
-    [self.locationManager setDelegate:self];
-    
-    [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
-    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    
-    [self.mapView setShowsUserLocation:YES];
+- (IBAction)backToParkBoundaryItemPressed:(id)sender {
     
     
-    // Override point for customization after application launch.
-    [self.window makeKeyAndVisible];
-    return YES;
+    [self drawNationalParkArea];
 }
+
+
+//
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    self.mapView.delegate = self;
+//    
+//    self.locationManager = [[CLLocationManager alloc] init];
+//    [self.locationManager setDelegate:self];
+//    
+//    [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
+//    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+//    
+//    [self.mapView setShowsUserLocation:YES];
+//    
+//    
+//    // Override point for customization after application launch.
+//    [self.window makeKeyAndVisible];
+//    return YES;
+//}
 
 /*
 #pragma mark - Navigation
