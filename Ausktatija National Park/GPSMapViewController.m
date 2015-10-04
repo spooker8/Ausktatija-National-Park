@@ -21,15 +21,13 @@
 
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidLoad
+
+{
+   [super viewDidLoad];
     
    [self startCoreLocation];
    [self drawNationalParkArea];
-    
-    
-    
-    
     
     
 }
@@ -61,7 +59,7 @@
     // create a map-point using lower-left co-ordinate.
     MKMapPoint lowerLeft = MKMapPointForCoordinate(lowerLeftCoOrd);
     
-    // upper-right co-ordinate of USA Map
+    // upper-right co-ordinate of the National Park
     CLLocationCoordinate2D upperRightCoOrd = CLLocationCoordinate2DMake(55.517075, 26.191882);
     
     // create a map-point using upper-right co-ordinate
@@ -111,27 +109,25 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 
 {
- 
-    
-         
-    CLLocation* loc = [locations lastObject]; // locations is guaranteed to have at least one object
+  
+    CLLocation* loc = [locations lastObject];
+    // locations is guaranteed to have at least one object
     float latitude = loc.coordinate.latitude;
     float longitude = loc.coordinate.longitude;
     NSLog(@"%.8f",latitude);
     NSLog(@"%.8f",longitude);
     
     
-    CLLocationCoordinate2D userlocation = self.mapView.userLocation.location.coordinate;
-    MKMapPoint userPoint = MKMapPointForCoordinate(userlocation);
+     if (self.mapView.userLocation.location.horizontalAccuracy > 0) {
+    
+    CLLocationCoordinate2D userLocation = self.mapView.userLocation.location.coordinate;
+    MKMapPoint userPoint = MKMapPointForCoordinate(userLocation);
     BOOL inside = MKMapRectContainsPoint(self.mapRect, userPoint);
     
     
-    
-    NSLog(@"%f",userlocation.latitude);
-    
     NSLog(@"Inside the park ? : %@", (inside) ? @"YES"  : @"NO");
     
-    if (inside == YES) {
+    if (inside == YES ) {
         
         self.mapView.showsUserLocation = YES;
         
@@ -144,13 +140,16 @@
     } else if (inside == NO) {
         
         
-        self.notInBoundaryAlertLabel.text = @"You are not in National Park Boundary";
+        self.notInBoundaryAlertLabel.text = @"You are not in the National Park Boundary";
         
         
-    }
+            }
 
+        }
          
      }
+    
+    
 
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
