@@ -11,13 +11,6 @@
 @interface GPSMapViewController ()
 
 
-@property (nonatomic, strong) CLLocation *selectedLocation;
-@property (strong, nonatomic) CLLocationManager *locationManager;
-@property (nonatomic, assign) CLLocationDistance distance;
-
-@property (nonatomic, assign) CLLocationCoordinate2D topLeftCoordinate;
-@property (nonatomic, assign) CLLocationCoordinate2D bottomRightCoordinate;
-
 
 
 @end
@@ -25,7 +18,6 @@
 @implementation GPSMapViewController
 
 @synthesize coordinate;
-@synthesize topLeftCoordinate, bottomRightCoordinate;
 
 
 
@@ -33,16 +25,16 @@
     [super viewDidLoad];
     
    [self startCoreLocation];
-
-    
-    CLLocationCoordinate2D ireland = CLLocationCoordinate2DMake(55.510710, 25.817404);
- 
-    [self.mapView setRegion: MKCoordinateRegionMakeWithDistance(ireland, 9000, 6000)];
-    [self.mapView setMapType: MKMapTypeStandard];
+   [self drawNationalParkArea];
     
     
-
+    
+    
+    
+    
 }
+
+
 
 -(void)viewDidDisappear:(BOOL)animated{
     
@@ -55,6 +47,35 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark draw national park area
+
+-(void)drawNationalParkArea
+{
+    
+    // lower-left co-ordinate of national park
+    CLLocationCoordinate2D lowerLeftCoOrd = CLLocationCoordinate2DMake(55.211601, 25.794129);
+    
+    // create a map-point using lower-left co-ordinate.
+    MKMapPoint lowerLeft = MKMapPointForCoordinate(lowerLeftCoOrd);
+    
+    // upper-right co-ordinate of USA Map
+    CLLocationCoordinate2D upperRightCoOrd = CLLocationCoordinate2DMake(55.517075, 26.191882);
+    
+    // create a map-point using upper-right co-ordinate
+    MKMapPoint upperRight = MKMapPointForCoordinate(upperRightCoOrd);
+    
+    // create a map-rect using both co-ordinates as follows.
+    MKMapRect mapRect = MKMapRectMake(lowerLeft.x, upperRight.y, upperRight.x - lowerLeft.x, lowerLeft.y - upperRight.y);
+    
+    self.mapRect = mapRect;
+    
+    // set zoom to rect &amp; you are done.
+    [self.mapView setVisibleMapRect:mapRect animated:YES];
+    
+    
 }
 
 
@@ -80,7 +101,7 @@
             
             [self.locationManager startUpdatingLocation];
             
-        
+         self.mapView.showsUserLocation = YES;
             
         }
         
@@ -90,26 +111,112 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 
 {
+ 
+    
+         
+    CLLocation* loc = [locations lastObject]; // locations is guaranteed to have at least one object
+    float latitude = loc.coordinate.latitude;
+    float longitude = loc.coordinate.longitude;
+    NSLog(@"%.8f",latitude);
+    NSLog(@"%.8f",longitude);
     
     
-}
+    CLLocationCoordinate2D userlocation = self.mapView.userLocation.location.coordinate;
+    MKMapPoint userPoint = MKMapPointForCoordinate(userlocation);
+    BOOL inside = MKMapRectContainsPoint(self.mapRect, userPoint);
+    
+    
+    
+    NSLog(@"%f",userlocation.latitude);
+    
+    NSLog(@"Inside the park ? : %@", (inside) ? @"YES"  : @"NO");
+    
+    if (inside == YES) {
+        
+        self.mapView.showsUserLocation = YES;
+        
+        [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
+        
+        self.notInBoundaryAlertLabel.text = @"";
+        
+        
+        
+    } else if (inside == NO) {
+        
+        
+        self.notInBoundaryAlertLabel.text = @"You are not in National Park Boundary";
+        
+        
+    }
+
+         
+     }
 
 
-#pragma mark Limit Mapscroll to designated fixed area of the national park
-
--(void)mapView:(MKMapView *)mapview regionWillChangeAnimated:(BOOL)animated
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
+    if (userLocation.location == nil)
+        return;
     
-    
-    
-    
-    
+    //do something with userLocation...
 }
 
 
 
+- (IBAction)myCurrentLocation:(id)sender {
+   
+
+    //if user is within the location of the national park show the user location if not give uialertview stating that the person is out of national park range. please try again from the park region.
+
+    CLLocationCoordinate2D userlocation = self.mapView.userLocation.location.coordinate;
+    
+
+    MKMapPoint userPoint = MKMapPointForCoordinate(userlocation);
+    
+    
+    BOOL inside = MKMapRectContainsPoint(self.mapRect, userPoint);
+    
+
+    
+    NSLog(@"Inside the park ? : %@", (inside) ? @"YES"  : @"NO");
+    
+    if (inside == YES) {
+        
+        self.mapView.showsUserLocation = YES;
+    
+       [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
+        
+        self.notInBoundaryAlertLabel.text = @"";
+        
 
 
+    } else if (inside == NO) {
+        
+        
+        self.notInBoundaryAlertLabel.text = @"You are not in National Park Boundary";
+        
+   
+        }
+}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.mapView.delegate = self;
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager setDelegate:self];
+    
+    [self.locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    [self.mapView setShowsUserLocation:YES];
+    
+    
+    // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
+    return YES;
+}
 
 /*
 #pragma mark - Navigation
