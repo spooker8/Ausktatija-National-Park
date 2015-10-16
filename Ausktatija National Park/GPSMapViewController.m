@@ -26,6 +26,16 @@
 {
    [super viewDidLoad];
     
+    [self revealMenuInit];
+    
+    _filterButton.target = self.revealViewController;
+    _filterButton.action = @selector(rightRevealToggle:);
+    
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    
+    
    [self startCoreLocation];
     
       
@@ -37,6 +47,7 @@
    [self drawNationalParkArea];
    [self parkBoundaryCheck];
     
+   
     
     
 }
@@ -54,6 +65,24 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark filterMenu Button
+
+-(void)revealMenuInit
+{
+    
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    
+    UIBarButtonItem *rightRevealButtonIteam = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"reveal-icon.png"] style:UIBarButtonItemStylePlain target:revealController action:@selector(rightRevealToggle:)];
+    
+    self.navigationItem.rightBarButtonItem = rightRevealButtonIteam;
+    
+    
 }
 
 
@@ -131,6 +160,9 @@
 
 
 #pragma mark Corelocation Start
+
+- (IBAction)filterMenu:(id)sender {
+}
 
 -(void)startCoreLocation {
     

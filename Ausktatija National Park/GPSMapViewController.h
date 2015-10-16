@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "SWRevealViewController.h"
+
 
 
 
@@ -26,6 +28,8 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (weak, nonatomic) IBOutlet UILabel *notInBoundaryAlertLabel;
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *filterButton;
 
 
 

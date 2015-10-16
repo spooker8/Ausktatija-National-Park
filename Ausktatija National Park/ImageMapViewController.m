@@ -20,7 +20,7 @@
     
     self.title = NSLocalizedString(@"National Park Map", nil);
     
-    [self revealMenuInit];
+  //  [self revealMenuInit];
     
 
     

@@ -23,11 +23,12 @@
                     <connections>
                         <segue destination="ou6-ae-MOh" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="E9P-ug-Hw8"/>
                         <segue destination="3in-KT-TC3" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="FYb-5U-vkz"/>
+                        <segue destination="L8B-pO-jeU" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="USc-g4-eXz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-299.5" y="102.5"/>
+            <point key="canvasLocation" x="-399.5" y="274.5"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="1oF-8W-WGw">
@@ -384,7 +385,7 @@ Sixty-four species of plant, eight species of fungus and 48 species of bird foun
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Z1S-JG-bur" kind="show" id="GO4-fs-3td"/>
+                                    <segue destination="tHA-L9-lEU" kind="show" id="ev6-K4-ZQg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -401,7 +402,7 @@ Sixty-four species of plant, eight species of fungus and 48 species of bird foun
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8z-od-WRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605.5" y="590.5"/>
+            <point key="canvasLocation" x="671.5" y="590.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fad-v5-YeQ">
@@ -669,17 +670,17 @@ Lithuania
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="qV8-Sr-RdX" kind="show" identifier="imagemapsegue" id="iMB-3B-tHM"/>
-                        <segue destination="Z1S-JG-bur" kind="show" identifier="gpsmapsegue" id="NS9-pJ-ZOZ"/>
+                        <segue destination="Z1S-JG-bur" kind="show" identifier="gpsmapsegue" id="Fwd-HS-goU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1py-Vj-cps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.5" y="1390.5"/>
+            <point key="canvasLocation" x="1626.5" y="1454.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="rDS-Yh-eTx">
             <objects>
-                <viewController id="Z1S-JG-bur" customClass="GPSMapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z1S-JG-bur" customClass="GPSMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mj1-lh-nNn"/>
                         <viewControllerLayoutGuide type="bottom" id="67b-wE-fa4"/>
@@ -722,9 +723,7 @@ Lithuania
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5uu-KS-OCe">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="oiN-67-wTZ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="5uu-KS-OCe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="riw-yP-pML" id="6Df-s4-JFS"/>
@@ -733,7 +732,36 @@ Lithuania
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0V-Du-7rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2203.5" y="1911.5"/>
+            <point key="canvasLocation" x="2152.5" y="1902.5"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="nC1-91-eI7">
+            <objects>
+                <viewController restorationIdentifier="menuController" storyboardIdentifier="menuController" id="L8B-pO-jeU" customClass="FilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ES3-7G-paY"/>
+                        <viewControllerLayoutGuide type="bottom" id="rbw-13-hbs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pMq-xz-mo9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter your result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1K-2e-ekm">
+                                <rect key="frame" x="86" y="78" width="213" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnV-VY-WfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2583.5" y="1902.5"/>
         </scene>
         <!--Image Map-->
         <scene sceneID="LEy-aQ-xgC">
@@ -1276,7 +1304,7 @@ Lithuania
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jyz-N2-wbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081.5" y="1390.5"/>
+            <point key="canvasLocation" x="1096.5" y="1554.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1284,6 +1312,6 @@ Lithuania
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HWd-93-YiV"/>
-        <segue reference="GO4-fs-3td"/>
+        <segue reference="ev6-K4-ZQg"/>
     </inferredMetricsTieBreakers>
 </document>
