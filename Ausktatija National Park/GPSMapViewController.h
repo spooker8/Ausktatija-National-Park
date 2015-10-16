@@ -16,6 +16,16 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
+@property(nonatomic, retain) CLLocationManager *locationManager;
+@property (assign, nonatomic) CLLocationCoordinate2D  userLocation;
+@property (assign, nonatomic) MKMapRect mapRect;
+@property (assign, nonatomic) MKMapPoint userPoint;
+
+
+@property (nonatomic, assign) BOOL inside;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+
+@property (weak, nonatomic) IBOutlet UILabel *notInBoundaryAlertLabel;
 
 
 

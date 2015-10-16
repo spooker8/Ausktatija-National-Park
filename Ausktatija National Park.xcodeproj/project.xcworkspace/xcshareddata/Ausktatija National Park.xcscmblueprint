@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "257607B8E042AC602C3AADF13C779A8931B93B06",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "257607B8E042AC602C3AADF13C779A8931B93B06" : 0,
+    "EA629F7F130FCF7DAF54B48FA435BB0669175B25" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A32A6557-C553-4EED-9CEB-2C0A0A0B2340",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "257607B8E042AC602C3AADF13C779A8931B93B06" : "Ausktatija-National-Park\/",
+    "EA629F7F130FCF7DAF54B48FA435BB0669175B25" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Ausktatija National Park",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ausktatija National Park.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/spooker8\/Ausktatija-National-Park.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "257607B8E042AC602C3AADF13C779A8931B93B06"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/spooker8\/PirateAssigment.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EA629F7F130FCF7DAF54B48FA435BB0669175B25"
+    }
+  ]
+}

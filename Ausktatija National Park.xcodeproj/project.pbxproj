@@ -42,6 +42,15 @@
 		44E017161BBD21D600067AC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E017151BBD21D600067AC8 /* MapKit.framework */; };
 		44E0171B1BBD5AD700067AC8 /* GPSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E0171A1BBD5AD700067AC8 /* GPSMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		44E0171D1BBD5E7200067AC8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E0171C1BBD5E7200067AC8 /* CoreLocation.framework */; };
+		44E829E91BD09DB2006B85B5 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E829DD1BD09DB2006B85B5 /* REFrostedContainerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44E829EA1BD09DB2006B85B5 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E829E11BD09DB2006B85B5 /* REFrostedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44E829EB1BD09DB2006B85B5 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E829E21BD09DB2006B85B5 /* RECommonFunctions.m */; settings = {ASSET_TAGS = (); }; };
+		44E829EC1BD09DB2006B85B5 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E829E51BD09DB2006B85B5 /* UIView+REFrostedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44E829ED1BD09DB2006B85B5 /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E829E71BD09DB2006B85B5 /* UIImage+REFrostedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44E829EE1BD09DB2006B85B5 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E829E81BD09DB2006B85B5 /* UIViewController+REFrostedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		44E829F01BD09E01006B85B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E829EF1BD09E01006B85B5 /* Foundation.framework */; };
+		44E829F21BD09E09006B85B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E829F11BD09E09006B85B5 /* CoreGraphics.framework */; };
+		44E829F41BD09E14006B85B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E829F31BD09E14006B85B5 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +128,21 @@
 		44E017191BBD5AD700067AC8 /* GPSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSMapViewController.h; sourceTree = "<group>"; };
 		44E0171A1BBD5AD700067AC8 /* GPSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSMapViewController.m; sourceTree = "<group>"; };
 		44E0171C1BBD5E7200067AC8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		44E829DD1BD09DB2006B85B5 /* REFrostedContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REFrostedContainerViewController.m; path = FrostedViewController/REFrostedContainerViewController.m; sourceTree = "<group>"; };
+		44E829DE1BD09DB2006B85B5 /* REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REFrostedViewController.h; path = FrostedViewController/REFrostedViewController.h; sourceTree = "<group>"; };
+		44E829DF1BD09DB2006B85B5 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RECommonFunctions.h; path = FrostedViewController/RECommonFunctions.h; sourceTree = "<group>"; };
+		44E829E01BD09DB2006B85B5 /* UIImage+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+REFrostedViewController.h"; path = "FrostedViewController/UIImage+REFrostedViewController.h"; sourceTree = "<group>"; };
+		44E829E11BD09DB2006B85B5 /* REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REFrostedViewController.m; path = FrostedViewController/REFrostedViewController.m; sourceTree = "<group>"; };
+		44E829E21BD09DB2006B85B5 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RECommonFunctions.m; path = FrostedViewController/RECommonFunctions.m; sourceTree = "<group>"; };
+		44E829E31BD09DB2006B85B5 /* UIView+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+REFrostedViewController.h"; path = "FrostedViewController/UIView+REFrostedViewController.h"; sourceTree = "<group>"; };
+		44E829E41BD09DB2006B85B5 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REFrostedContainerViewController.h; path = FrostedViewController/REFrostedContainerViewController.h; sourceTree = "<group>"; };
+		44E829E51BD09DB2006B85B5 /* UIView+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+REFrostedViewController.m"; path = "FrostedViewController/UIView+REFrostedViewController.m"; sourceTree = "<group>"; };
+		44E829E61BD09DB2006B85B5 /* UIViewController+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+REFrostedViewController.h"; path = "FrostedViewController/UIViewController+REFrostedViewController.h"; sourceTree = "<group>"; };
+		44E829E71BD09DB2006B85B5 /* UIImage+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+REFrostedViewController.m"; path = "FrostedViewController/UIImage+REFrostedViewController.m"; sourceTree = "<group>"; };
+		44E829E81BD09DB2006B85B5 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+REFrostedViewController.m"; path = "FrostedViewController/UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
+		44E829EF1BD09E01006B85B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		44E829F11BD09E09006B85B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		44E829F31BD09E14006B85B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +150,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E829F41BD09E14006B85B5 /* UIKit.framework in Frameworks */,
+				44E829F21BD09E09006B85B5 /* CoreGraphics.framework in Frameworks */,
+				44E829F01BD09E01006B85B5 /* Foundation.framework in Frameworks */,
 				44E0171D1BBD5E7200067AC8 /* CoreLocation.framework in Frameworks */,
 				44E017161BBD21D600067AC8 /* MapKit.framework in Frameworks */,
 				4417E7571B894BBE000E4D30 /* SystemConfiguration.framework in Frameworks */,
@@ -145,6 +172,9 @@
 		4417E7581B894BC6000E4D30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44E829F31BD09E14006B85B5 /* UIKit.framework */,
+				44E829F11BD09E09006B85B5 /* CoreGraphics.framework */,
+				44E829EF1BD09E01006B85B5 /* Foundation.framework */,
 				44E0171C1BBD5E7200067AC8 /* CoreLocation.framework */,
 				44E017151BBD21D600067AC8 /* MapKit.framework */,
 				4417E7561B894BBE000E4D30 /* SystemConfiguration.framework */,
@@ -211,6 +241,7 @@
 		448447491B6735B70059FF99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44E829DC1BD09DA0006B85B5 /* FrostedViewController */,
 				44675CA51B88B0B700366C62 /* Reachability */,
 				4484474A1B6735B70059FF99 /* Info.plist */,
 				4484474B1B6735B70059FF99 /* main.m */,
@@ -388,6 +419,25 @@
 			name = FlickrPhotoViewNewTesting;
 			sourceTree = "<group>";
 		};
+		44E829DC1BD09DA0006B85B5 /* FrostedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44E829DD1BD09DB2006B85B5 /* REFrostedContainerViewController.m */,
+				44E829DE1BD09DB2006B85B5 /* REFrostedViewController.h */,
+				44E829DF1BD09DB2006B85B5 /* RECommonFunctions.h */,
+				44E829E01BD09DB2006B85B5 /* UIImage+REFrostedViewController.h */,
+				44E829E11BD09DB2006B85B5 /* REFrostedViewController.m */,
+				44E829E21BD09DB2006B85B5 /* RECommonFunctions.m */,
+				44E829E31BD09DB2006B85B5 /* UIView+REFrostedViewController.h */,
+				44E829E41BD09DB2006B85B5 /* REFrostedContainerViewController.h */,
+				44E829E51BD09DB2006B85B5 /* UIView+REFrostedViewController.m */,
+				44E829E61BD09DB2006B85B5 /* UIViewController+REFrostedViewController.h */,
+				44E829E71BD09DB2006B85B5 /* UIImage+REFrostedViewController.m */,
+				44E829E81BD09DB2006B85B5 /* UIViewController+REFrostedViewController.m */,
+			);
+			name = FrostedViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,6 +542,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				448447521B6735B70059FF99 /* ViewController.m in Sources */,
+				44E829E91BD09DB2006B85B5 /* REFrostedContainerViewController.m in Sources */,
+				44E829EC1BD09DB2006B85B5 /* UIView+REFrostedViewController.m in Sources */,
 				44DDC4C21B8C309E00E99439 /* FlickrModel2.m in Sources */,
 				4494C19F1B94195B00DEE032 /* ImageMapViewController.m in Sources */,
 				440D53B01B67729200104E13 /* NavigationViewController.m in Sources */,
@@ -503,15 +555,19 @@
 				44DD18C61B6F2F250020A599 /* PopularLakesViewController.m in Sources */,
 				44DA54491B85616B0026A3AF /* Flickr.m in Sources */,
 				44DD190D1B71E4430020A599 /* PlistToModelConverter.m in Sources */,
+				44E829EA1BD09DB2006B85B5 /* REFrostedViewController.m in Sources */,
 				44E0171B1BBD5AD700067AC8 /* GPSMapViewController.m in Sources */,
 				4484474C1B6735B70059FF99 /* main.m in Sources */,
 				44B061BD1B69BAE300FA8AB2 /* EmergencyContactViewController.m in Sources */,
+				44E829EB1BD09DB2006B85B5 /* RECommonFunctions.m in Sources */,
 				44DD19231B74DD720020A599 /* DetailPhotoViewController.m in Sources */,
 				441DAD441B9408F70064B4F1 /* NationalParkMapViewController.m in Sources */,
+				44E829ED1BD09DB2006B85B5 /* UIImage+REFrostedViewController.m in Sources */,
 				44DD18C01B6F2DB70020A599 /* PhotosViewController.m in Sources */,
 				44DDC4C81B8C30CC00E99439 /* FlickrParser.m in Sources */,
 				44DDC4C51B8C30B000E99439 /* FlickrAPIHelper.m in Sources */,
 				44B061881B690FC600FA8AB2 /* AboutParkViewController.m in Sources */,
+				44E829EE1BD09DB2006B85B5 /* UIViewController+REFrostedViewController.m in Sources */,
 				448447721B674ECF0059FF99 /* SWRevealViewController.m in Sources */,
 				44DD18C31B6F2EC40020A599 /* HowToGetThereViewController.m in Sources */,
 				44DD191E1B734A5F0020A599 /* PhotosCollectionViewCell.m in Sources */,
