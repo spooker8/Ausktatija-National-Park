@@ -15,14 +15,27 @@
 
 @implementation NavigationViewController {
     
-    NSArray *menu;
+    NSArray<NSDictionary<NSString *, NSString *> *> *menuItems;
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menu = @[@"one",@"two", @"three", @"four",@"five",@"six",@"seven",@"eight",@"nine",@"ten",@"eleven",@"twelve"];
+    menuItems = @[
+        @{@"identifier": @"one", @"title": @"About the Park"},
+        @{@"identifier": @"two", @"title": @"Emergency Contact"},
+        @{@"identifier": @"three", @"title": @"Photos"},
+        @{@"identifier": @"four", @"title": @"How to get there"},
+        @{@"identifier": @"five", @"title": @"Lakes"},
+        @{@"identifier": @"six", @"title": @"National Park Map"},
+        @{@"identifier": @"seven", @"title": @"Bicycle Trail"},
+        @{@"identifier": @"eight", @"title": @"Kayak Routes"},
+        @{@"identifier": @"nine", @"title": @"Camping Grounds"},
+        @{@"identifier": @"ten", @"title": @"Lodging"},
+        @{@"identifier": @"eleven", @"title": @"Historic Sites"},
+        @{@"identifier": @"twelve", @"title": @"Local Events"}
+    ];
     
 }
 
@@ -43,17 +56,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return [menu count];
+    return [menuItems count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    NSString *cellIdentifier = [menu objectAtIndex:indexPath.row];
+    NSDictionary<NSString *, NSString *> *menuItem = menuItems[indexPath.row];
+    NSString *cellIdentifier = menuItem[@"identifier"];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: cellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
+    cell.textLabel.text = menuItem[@"title"];
     
     return cell;
 }
@@ -66,7 +79,7 @@
     // Set the title of navigation bar by using the menu items
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
-    destViewController.title = [[menu objectAtIndex:indexPath.row] capitalizedString];
+    destViewController.title = menuItems[indexPath.row][@"title"];
     
     
 }
